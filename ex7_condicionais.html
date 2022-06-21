@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedir para o usuário digitar dois valores e mostrar uma mensagem informando se foi aprovado ou não. A nota de corte é 5.</h1>
+    <pre>
+        <code>
+            var num_1 = parseFloat(prompt("Nota de português:"));
+            var num_2 = parseFloat(prompt("Nota de matemática:"));
+            var media = (num_1+num_2)/2;
+            if (media>=5) {
+                alert("Parabens, você foi aprovado")
+            } else {
+                alert("Que pena, você foi reprovado");
+            }
+        </code>
+    </pre>
+    <script>
+        var num_1 = parseFloat(prompt("Nota de português:"));
+        var num_2 = parseFloat(prompt("Nota de matemática:"));
+        var media = (num_1+num_2)/2;
+        if (media>=5) {
+            alert("Parabens, você foi aprovado")
+        } else {
+            alert("Que pena, você foi reprovado");
+        }
+    </script>
+    <!--Estruturas condicionais-->
+</body>
+</html>

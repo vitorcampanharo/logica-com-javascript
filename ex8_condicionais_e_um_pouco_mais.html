@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crie um programa em que dois usuários digitem um valor, e seja sorteado um numero entre 0 ou 1. Se for 0, o usuário que digitou menor valor ganha. Se for 1, o usuário que digitou mair valor ganha.</h1>
+    <pre>
+        <code>
+            var jogador1 = parseInt(prompt("Jogador 1, digite seu número:"));
+            var jogador2 = parseInt(prompt("Jogador     2, digite seu número:"));
+            var sorteio = parseInt(Math.random() *  2);
+            alert("O número sorteado foi "+sorteio);
+            if (sorteio==0) {
+            if (jogador1>jogador2) {
+                alert("Jogador 2 ganhou");
+            }
+            if (jogador1<jogador2) {
+                alert("Jogador 1 ganhou")
+            }
+        }
+        if (sorteio==1) {
+            if (jogador1>jogador2) {
+                alert("Jogador 1 ganhou")
+            }
+            if (jogador1<jogador2) {
+                alert("Jogador 2 ganhou")
+            }
+        }
+        </code>
+    </pre>
+    <script>
+        var jogador1 = parseInt(prompt("Jogador 1, digite seu número:"));
+        var jogador2 = parseInt(prompt("Jogador 2, digite seu número:"));
+        
+        while (jogador1==jogador2) {
+            alert("Empatou, jogo finalizado");
+            break
+        }        
+        if (sorteio==0) {
+            var sorteio = parseInt(Math.random() * 2);
+            alert("O número sorteado foi "+sorteio);
+            if (jogador1>jogador2) {
+                alert("Jogador 2 ganhou");
+            }
+            if (jogador1<jogador2) {
+                alert("Jogador 1 ganhou")
+            }
+        }
+        if (sorteio==1) {
+            var sorteio = parseInt(Math.random() * 2);
+            alert("O número sorteado foi "+sorteio);
+            if (jogador1>jogador2) {
+                alert("Jogador 1 ganhou")
+            }
+            if (jogador1<jogador2) {
+                alert("Jogador 2 ganhou")
+            }
+        }
+    </script>
+    <!--"Math.random()" é uma função para sortear números aleatórios entre 0 e 0,9. Para sortear entre os números 0 e 1 foi necessário escrever "parseInt(Math.random() * 2)", Para aparecer apenas números inteiros e também para ultrapassar valores maiores que 1.-->
+</body>
+</html>
