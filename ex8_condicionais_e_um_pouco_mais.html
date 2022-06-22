@@ -8,56 +8,61 @@
 </head>
 <body>
     <h1>Crie um programa em que dois usuários digitem um valor, e seja sorteado um numero entre 0 ou 1. Se for 0, o usuário que digitou menor valor ganha. Se for 1, o usuário que digitou mair valor ganha.</h1>
-    <pre>
-        <code>
-            var jogador1 = parseInt(prompt("Jogador 1, digite seu número:"));
-            var jogador2 = parseInt(prompt("Jogador     2, digite seu número:"));
-            var sorteio = parseInt(Math.random() *  2);
-            alert("O número sorteado foi "+sorteio);
-            if (sorteio==0) {
-            if (jogador1>jogador2) {
-                alert("Jogador 2 ganhou");
+   <pre>
+       <code>
+        var jogador1 = parseInt(prompt("Jogador 1, digite seu número:"));
+        var jogador2 = parseInt(prompt("Jogador 2, digite seu número:"));        
+        if (jogador1==jogador2) {
+            alert("Empate, jogo encerrado")
+        }
+        if (jogador1!=jogador2) {
+            var sorteio = parseInt(Math.random() * 2);
+            if (sorteio==0) {           
+                alert("O número sorteado foi "+sorteio);
+                if (jogador1>jogador2) {
+                    alert("Jogador 2 ganhou");
+                }
+                if (jogador1 < jogador2) {
+                    alert("Jogador 1 ganhou")
+                }
             }
-            if (jogador1<jogador2) {
-                alert("Jogador 1 ganhou")
+            if (sorteio==1) {
+                alert("O número sorteado foi "+sorteio);
+                if (jogador1>jogador2) {
+                    alert("Jogador 1 ganhou")
+                }
+                if (jogador1 < jogador2) {
+                    alert("Jogador 2 ganhou")
+                }
             }
         }
-        if (sorteio==1) {
-            if (jogador1>jogador2) {
-                alert("Jogador 1 ganhou")
-            }
-            if (jogador1<jogador2) {
-                alert("Jogador 2 ganhou")
-            }
-        }
-        </code>
-    </pre>
+       </code>
+   </pre>
     <script>
         var jogador1 = parseInt(prompt("Jogador 1, digite seu número:"));
-        var jogador2 = parseInt(prompt("Jogador 2, digite seu número:"));
-        
-        while (jogador1==jogador2) {
-            alert("Empatou, jogo finalizado");
-            break
-        }        
-        if (sorteio==0) {
-            var sorteio = parseInt(Math.random() * 2);
-            alert("O número sorteado foi "+sorteio);
-            if (jogador1>jogador2) {
-                alert("Jogador 2 ganhou");
-            }
-            if (jogador1<jogador2) {
-                alert("Jogador 1 ganhou")
-            }
+        var jogador2 = parseInt(prompt("Jogador 2, digite seu número:"));               
+        if (jogador1==jogador2) {
+            alert("Os números jogados foram "+jogador1+" , logo deu empate, jogo encerrado")
         }
-        if (sorteio==1) {
+        if (jogador1!=jogador2) {
             var sorteio = parseInt(Math.random() * 2);
-            alert("O número sorteado foi "+sorteio);
-            if (jogador1>jogador2) {
-                alert("Jogador 1 ganhou")
+            if (sorteio==0) {           
+                alert("O número sorteado foi "+sorteio);
+                if (jogador1>jogador2) {
+                    alert("Jogador 2 ganhou");
+                }
+                if (jogador1<jogador2) {
+                    alert("Jogador 1 ganhou")
+                }
             }
-            if (jogador1<jogador2) {
-                alert("Jogador 2 ganhou")
+            if (sorteio==1) {
+                alert("O número sorteado foi "+sorteio);
+                if (jogador1>jogador2) {
+                    alert("Jogador 1 ganhou")
+                }
+                if (jogador1<jogador2) {
+                    alert("Jogador 2 ganhou")
+                }
             }
         }
     </script>

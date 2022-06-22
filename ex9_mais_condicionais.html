@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crie um programa em que o usuário digite duas notas, e a mensagem se for aprovado, a nota de corte é 5. Porém, se a nota for 0 em qualquer uma das matérias, reprova automaticamente.</h1>
+    <pre>
+        <code>
+            var nota1 = parseFloat(prompt("Nota de português"));
+            var nota2 = parseFloat(prompt("Nota de matemática"));       
+            if (nota1==0 || nota2==0) {
+                alert("Nenhuma de suas notas pode ser 0, portanto está automaticamente reprovado")
+            }
+            if (nota1!=0 && nota2!=0) {
+                var media = (nota1+nota2)/2;
+                if (media>=5) {
+                    alert("Aprovado")
+                } else {
+                    alert("Reprovado")
+                }
+            }  
+        </code>
+    </pre>
+    <script>
+        var nota1 = parseFloat(prompt("Nota de português"));
+        var nota2 = parseFloat(prompt("Nota de matemática"));       
+        if (nota1==0 || nota2==0) {
+            alert("Nenhuma de suas notas pode ser 0, portanto está automaticamente reprovado")
+        }
+        if (nota1!=0 && nota2!=0) {
+            var media = (nota1+nota2)/2;
+            if (media>=5) {
+                alert("Aprovado")
+            } else {
+                alert("Reprovado")
+            }
+        }        
+    </script>
+</body>
+</html>
