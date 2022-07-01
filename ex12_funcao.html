@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000. Deve ter a possibilidade do usuário digitar outro número e também limpar a tabuada gerada previamente.</h1>
+    <pre>
+        <code>
+            function mostrarTabuada() {
+                var espaço = document.querySelector('#espaço');
+                var mensagem = ''
+                var numero1 = parseInt(prompt("Qual número deseja calcular:"));
+                var numero2 = 0
+                while (numero2 < 1000) {
+                    numero2 = numero2+1;
+                    mensagem += numero1+ ' * '+ numero2 +' = '+ (numero1*numero2)+ '< br>'
+                }
+                espaço.innerHTML = mensagem
+            }
+            function limparTabuada() {
+                mensagem = ""
+                espaço.innerHTML = mensagem
+            }  
+        </code>
+    </pre>
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+    <button onclick="limparTabuada()">Limpar tabuada</button>
+    <div id="espaço"></div>
+    <script>
+        function mostrarTabuada() {
+            var espaço = document.querySelector('#espaço');
+            var mensagem = ''
+            var numero1 = parseInt(prompt("Qual número deseja calcular:"));
+            var numero2 = 0
+            while (numero2 < 1000) {
+                numero2 = numero2+1;
+                mensagem += numero1+ ' * '+ numero2 +' = '+ (numero1*numero2)+ '<br>'
+            }
+            espaço.innerHTML = mensagem
+        }
+        function limparTabuada() {
+            mensagem = ""
+            espaço.innerHTML = mensagem
+        }  
+    </script>
+    <!--<button onliclick ""=...> serve para criar um botão no HTML, e a função 'onliclick' para linkar este botão com alguma função criada. 'function' serve para criar funções, dentro da função é escrito um código. E toda vez que evocar essa função, será evocado este código. " document.querySelector" serve para o javascript interagir com algum seletor dentro do HTML. " espaço.innerHTML = mensagem" para acrescentar alguma coisa feita no javascript dentro do HTML.-->
+</body>
+</html>
