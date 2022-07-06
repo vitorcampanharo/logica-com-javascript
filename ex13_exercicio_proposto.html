@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>teste</h1>
+    <button onclick="mostrarCalc()">Mostrar calculadora</button>
+    <button onclick="limparCalc()">Limpar calculadora</button>
+    <div id="usar"></div>
+    <script>
+        function mostrarCalc() {
+            var calc = document.querySelector('#usar');
+            var resultado = ''
+            var num_1 = parseInt(prompt("Digite o número que será calculado"));
+            var num_2 = 0;
+            while (num_2<1000) {
+                num_2++
+                resultado+=num_1+' * '+num_2+' = '+(num_1*num_2)+ '<br>';
+            }
+            calc.innerHTML=resultado
+        }
+        function limparCalc() {
+            var resultado = ''
+            calc.innerHTML=resultado
+        }
+    </script>
 </body>
 </html>
