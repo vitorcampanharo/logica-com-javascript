@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de área do retângulo</title>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;button onclick="area()"&gt;Calcular área&lt;/button&lt;
+            &lt;div id="calc_area"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var largura = parseFloat(prompt("Digite o valor da largura do retângulo:"));
+        var altura = parseFloat(prompt("Digite  valor da altura do retângulo:"));
+        function area() {
+        var area = document.querySelector("#calc_area");
+        var lados = ("A largura é "+largura+"cm e a altura é "+altura+"cm e a área total é igual à "+(largura*altura)+"cm2");
+        area.innerHTML=lados;
+    }
+    &lt;/script&gt;
+        </code>
+    </pre>
+    <h1>Calculando área de retângulo</h1>
+    <button onclick="area()">Calcular área</button>
+    <div id="calc_area"></div>
+    <script>
+        var largura = parseFloat(prompt("Digite o valor da largura do retângulo:"));
+        var altura = parseFloat(prompt("Digite  valor da altura do retângulo:"));
+        function area() {
+            var area = document.querySelector("#calc_area");
+            var lados = ("A largura é "+largura+"cm e a altura é "+altura+"cm e a área total é igual à "+(largura*altura)+"cm2");
+            area.innerHTML=lados;
+        }
+    </script>
+</body>
+</html>

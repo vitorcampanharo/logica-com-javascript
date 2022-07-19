@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        button{
+            height: 50px;
+            width: 50px;
+            font-size: 2em;
+        }
+        .limpar{
+            width: 150px;
+        }
+        #calculadora{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;button onclick="somar()"&gt;+&lt;/button&gt;
+            &lt;button onclick="subtrair()"&gt;-&lt;/button&gt;
+            &lt;button onclick="multiplicar()"&gt;*&lt;/button&gt;
+            &lt;button onclick="dividir()"&gt;&lt;/button&gt;
+            &lt;button class="limpar" onclick="limpar()"&gt;Limpar&lt;/button&gt;
+            &lt;div id="calculadora"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var num_principal = parseFloat(prompt("Digite um número para iniciar o cálculo:"));
+        var calc = document.querySelector("#calculadora");
+        calc.innerHTML=num_principal
+        function somar() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal += num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function subtrair() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal-num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function multiplicar() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal*num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function dividir() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal/num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function limpar() {
+            var calc = document.querySelector("#calculadora");
+            calc.innerHTML = "";
+        }
+    &lt;/script&gt;
+        </code>
+    </pre>
+    <h1>Mini calculadora</h1>
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+    <button class="limpar" onclick="limpar()">Limpar</button>
+    <div id="calculadora"></div>
+    <script>
+        var num_principal = parseFloat(prompt("Digite um número para iniciar o cálculo:"));
+        var calc = document.querySelector("#calculadora");
+        calc.innerHTML=num_principal
+        function somar() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal += num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function subtrair() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal-num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function multiplicar() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal*num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function dividir() {
+            var calc = document.querySelector("#calculadora");
+            var num_secundario = parseFloat(prompt("Digite o próximo número a ser calculado:"));
+            num_principal = num_principal/num_secundario;
+            calc.innerHTML = num_principal;
+        }
+        function limpar() {
+            var calc = document.querySelector("#calculadora");
+            calc.innerHTML = "";
+        }
+    </script>
+</body>
+</html>
