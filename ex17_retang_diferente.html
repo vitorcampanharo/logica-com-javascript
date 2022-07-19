@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de área de retângulo</title>
+    <style>
+        #retangulo{
+            width: 200px;
+            height: 100px;
+            border: solid black;
+        }
+        form p, p{
+            font-size: 1.3em;
+        }
+        .form2{
+            font-size: 1.3em;
+        }
+        button{
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;div id="retangulo">&lt;/div>
+            &lt;form action="retangulo.js" method="get">
+        &lt;p>
+            &lt;label for="ilargura">Largura:</label>
+            &lt;input type="text" name="largura" id="ilargura" required>
+        &lt;/p>
+        &lt;p>
+            &lt;label for="ialtura">Altura:</label>
+            &lt;input type="text" name="altura" id="ialtura" required>
+        &lt;/p>
+        &lt;/form>
+        &lt;button onclick="calcular()">Calcular área&lt;/button>
+        &lt;button onclick="limpar()">Limpar&lt;/button>
+        &lt;p>Área total: &lt;span id="area_total">&lt;/span></p>
+        &lt;script>
+            function calcular() {
+                var largura = document.getElementById("ilargura").value;
+                var altura = document.getElementById("ialtura").value;
+                var area_total = document.querySelector("#area_total");
+                var resultado_area =(largura*altura)+" cm2";
+                area_total.innerHTML=resultado_area
+                }
+                function limpar() {
+                var area_total = document.querySelector("#area_total");
+                area_total.innerHTML=""
+                }
+                &lt;/script>
+        </code>
+    </pre>
+    <div id="retangulo"></div>
+    <form method="get">
+        <p>
+            <label for="ilargura">Largura:</label>
+            <input type="text" name="largura" id="ilargura" required>
+        </p>
+        <p>
+            <label for="ialtura">Altura:</label>
+            <input type="text" name="altura" id="ialtura" required>
+        </p>
+    </form>
+    <button onclick="calcular()">Calcular área</button>
+    <p>Área total: <span id="area_total"></span></p>
+    <script>
+        function calcular() {
+            var largura = document.getElementById("ilargura").value;
+            var altura = document.getElementById("ialtura").value;
+            var area_total = document.querySelector("#area_total");
+            var resultado_area =(largura*altura)+" cm2";
+            area_total.innerHTML=resultado_area
+        }
+    </script>
+</body>
+</html>
