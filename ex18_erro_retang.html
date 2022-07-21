@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;button onclick="calcular_area()">Calcular área</button>
+            &lt;button onclick="limpar()">Limpar</button>
+            div id="area_calculada"></div>
+            &lt;script>
+            var largura = parseFloat(prompt("Qual a largura:"));
+            var altura = parseFloat(prompt("Qual a altura:"));
+            if (isNaN(largura) || isNaN(altura)) {
+            throw new Error("Digite apenas números")
+            }
+            var resultado = (largura*altura);    
+            var area_calculada = document.querySelector("#area_calculada");
+            area_calculada.innerHTML=resultado
+            function calcular_area() {
+            var largura = parseFloat(prompt("Qual a largura:"));
+            var altura = parseFloat(prompt("Qual a altura:"));
+            if (isNaN(largura) || isNaN(altura)) {
+            throw new Error("Digite apenas números")
+            }
+            var resultado = (largura*altura);
+            var area_calculada = document.querySelector("#area_calculada");
+            area_calculada.innerHTML=resultado
+            }
+            function limpar() {
+            var area_calculada = document.querySelector("#area_calculada");
+            area_calculada.innerHTML=""
+            }
+            &lt;/script>
+        </code>
+    </pre>
+    <button onclick="calcular_area()">Calcular área</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="area_calculada"></div>
+    <script>
+        var largura = parseFloat(prompt("Qual a largura:"));
+        var altura = parseFloat(prompt("Qual a altura:"));
+        if (isNaN(largura) || isNaN(altura)) {
+            throw new Error("Digite apenas números")
+        }
+        var resultado = (largura*altura);    
+        var area_calculada = document.querySelector("#area_calculada");
+        area_calculada.innerHTML=resultado
+        function calcular_area() {
+            var largura = parseFloat(prompt("Qual a largura:"));
+            var altura = parseFloat(prompt("Qual a altura:"));
+            if (isNaN(largura) || isNaN(altura)) {
+            throw new Error("Digite apenas números")
+            }
+            var resultado = (largura*altura);
+            var area_calculada = document.querySelector("#area_calculada");
+            area_calculada.innerHTML=resultado
+        }
+        function limpar() {
+            var area_calculada = document.querySelector("#area_calculada");
+            area_calculada.innerHTML=""
+        }
+    </script>
+    <!--Na linha de código "if (isNaN(largura) || isNaN(altura))" o programa está verificando se os elementos "largura e altura" são realmente números, caso não sejam, irá cair na condicional. E na condicional existe a função "throw new Error("Digite apenas números")" que serve para tratar o erro, que no caso seria "NaN", e no lugar disso aparece a mensagem escrita entre as aspas no console. (OBS: Ainda falta aperfeisoar o estudo sobre exceções).-->
+</body>
+</html>
