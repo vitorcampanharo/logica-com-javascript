@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mesmo exercício anterior, só que diferente</h1>
+    <pre>
+        <code>
+            &lt;div id="espaco"></div>
+            &lt;script>
+            var usar_espaco = document.querySelector("#espaco");
+            var produtos = new Array("maçã", " banana", " pão", " carne", " peixe", "café");
+            produtos.push("arroz", "feijão");
+            var mensagem = "";
+            for(var i = 0; i &lt; produtos.length; i++) {
+            mensagem += "produdo "+ (i+1) + ": "+ produtos[i]+ "&lt;br>"
+            }
+            usar_espaco.innerHTML=mensagem;
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="espaco"></div>
+    <script>
+        var usar_espaco = document.querySelector("#espaco");
+        var produtos = new Array("maçã", " banana", " pão", " carne", " peixe", "café");
+        produtos.push("arroz", "feijão");
+        var mensagem = "";
+        for(var i = 0; i < produtos.length; i++) {
+            mensagem += "produdo "+ (i+1) + ": "+ produtos[i]+ "<br>"
+        }
+        usar_espaco.innerHTML=mensagem;
+    </script>
+    <!--Desta forma, foi usado um laço de repetição "for" para escrever de outra maneira: O primeiro i é o começo, o segundo i é o final, e o terceiro i é o passo. O elemento "produtos.push()" serve para adicionar mais ítens dentro do array. O elemento "produtos.length" serve para contabilizar a quantidade de ítens dentro de 'produtos' neste caso.-->
+</body> 
+</html>

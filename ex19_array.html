@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostrar na tela todos os produtos disponíveis para compra. Os nomes dos produtos estão agrupados num array</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var usar_espaco = document.querySelector("#espaco");
+                var produtos = new Array("maçã", " banana", " pão", " carne", " peixe");
+                usar_espaco.innerHTML=produtos;
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="espaco"></div>
+    <script>
+        var usar_espaco = document.querySelector("#espaco");
+        var produtos = new Array("maçã", " banana", " pão", " carne", " peixe");
+        usar_espaco.innerHTML=produtos;
+    </script>
+</body>
+</html>
