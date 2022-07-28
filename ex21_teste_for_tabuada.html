@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="area_calculada"></div>
+    <script>
+        var area_calculada = document.querySelector("#area_calculada");
+        var num = parseFloat(prompt("Digite o número a ser calculado"));
+        var num_calculado = ""
+        for(i = 0;i < 11;i++){
+            num_calculado+= num + " * " + i + " = " + (num*i) + "<br>"
+        }
+        area_calculada.innerHTML=num_calculado
+        function calcular() {
+            var area_calculada = document.querySelector("#area_calculada");
+            var num = parseFloat(prompt("Digite o número a ser calculado"));
+            var num_calculado = ""
+            for(i = 0;i < 11;i+=1){
+            num_calculado+= num + " * " + i + " = " + (num*i) + "<br>"
+            }
+            area_calculada.innerHTML=num_calculado
+        }
+        function limpar() {
+            var area_calculada = document.querySelector("#area_calculada");
+            var num_calculado = ""
+            area_calculada.innerHTML=num_calculado
+        }
+
+    </script>
+</body>
+</html>
