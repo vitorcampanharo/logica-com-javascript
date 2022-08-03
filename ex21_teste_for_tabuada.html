@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
+    <pre>
+        <code>
+            &lt;button onclick="calcular()">Calcular</button>
+            &lt;button onclick="limpar()">Limpar</button>
+            &lt;div id="area_calculada"></div>
+            &lt;script>
+                var area_calculada = document.querySelector("#area_calculada");
+                var num = parseFloat(prompt("Digite o número a ser calculado"));
+                var num_calculado = ""
+                for(i = 0;i &lt; 11;i++){
+                    num_calculado+= num + " * " + i + " = " + (num*i) + "&lt;br>"
+                }
+                area_calculada.innerHTML=num_calculado
+                function calcular() {
+                    var area_calculada = document.querySelector("#area_calculada");
+                    var num = parseFloat(prompt("Digite o número a ser calculado"));
+                    var num_calculado = ""
+                    for(i = 0;i &lt; 11;i+=1){
+                    num_calculado+= num + " * " + i + " = " + (num*i) + "&lt;br>"
+                    }
+                    area_calculada.innerHTML=num_calculado
+                }
+                function limpar() {
+                    var area_calculada = document.querySelector("#area_calculada");
+                    var num_calculado = ""
+                    area_calculada.innerHTML=num_calculado
+                }
+            &lt;/script>
+        </code>
+    </pre>
     <button onclick="calcular()">Calcular</button>
     <button onclick="limpar()">Limpar</button>
     <div id="area_calculada"></div>
@@ -32,7 +62,6 @@
             var num_calculado = ""
             area_calculada.innerHTML=num_calculado
         }
-
     </script>
 </body>
 </html>

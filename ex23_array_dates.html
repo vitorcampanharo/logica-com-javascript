@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostrar na tela o dia da semana em que o usuário está acessando, usando Array</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var semana = new Array("domingo", "segunda", "terça", "quarta", "quinta","sexta", "sábado");
+                var hoje = new Date();
+                var dia_da_semana = hoje.getDay();
+                alert("Seja bem vindo, hoje é "+semana[dia_da_semana]);
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var semana = new Array("domingo", "segunda", "terça", "quarta", "quinta","sexta", "sábado");
+        var hoje = new Date();
+        var dia_da_semana = hoje.getDay();
+        alert("Seja bem vindo, hoje é "+semana[dia_da_semana]);
+    </script>
+</body>
+</html>

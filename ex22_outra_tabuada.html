@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+    <pre>
+        <code>
+            &lt;script>
+                var area_calculada = document.querySelector("#area_calculada");
+                var num_calculado = ""
+                for(j = 1;j &lt; 11;j++){
+                    for(i = 1;i &lt; 11;i++){
+                    num_calculado+=j + " * " + i + " = " + (i*j) + "&lt;br>"
+                    }
+                }
+                area_calculada.innerHTML=num_calculado
+            &lt;/script>
+        </code>
+    </pre>
     <div id="area_calculada"></div>        
     <script>
         var area_calculada = document.querySelector("#area_calculada");
