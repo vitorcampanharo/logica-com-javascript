@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostar na tela todos od dados de um produto específico, contendo quantidade em estoque e preço. Estes dados estarão agrupadps em um objeto.</h1>
+    <pre>
+        <code>
+            &lt;div id="mostrar"></div>
+            &lt;script>
+                var mostrar = document.querySelector("#mostrar");
+                var produtos = new Array("caneta", "lapis", "compasso", "borracha")
+                var caneta = new Object()
+                caneta.nome="caneta"
+                caneta.quantidade=10
+                caneta.preco=1.50
+                var lapis = new Object()
+                lapis.nome="lapis"
+                lapis.quantidade=15
+                lapis.preco=1
+                var tela = ""
+                tela+="Produtos: "+produtos+ "&lt;br>"
+                tela+= "&lt;br>"+"Produto: "+caneta.nome+ "&lt;br>";
+                tela+= "Quantidade: "+caneta.quantidade+ "&lt;br>";
+                tela+= "Preço: "+caneta.preco+" reais"+ "&lt;br>";
+                tela+= "&lt;br>"+"Produto: "+lapis.nome+ "&lt;br>";
+                tela+= "Quantidade: "+lapis.quantidade+ "&lt;br>";
+                tela+= "Preço: "+lapis.preco+" reais"+ "&lt;br>";
+                mostrar.innerHTML=tela
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="mostrar"></div>
+    <script>
+        var mostrar = document.querySelector("#mostrar");
+        var produtos = new Array("caneta", "lapis", "compasso", "borracha")
+        var caneta = new Object()
+        caneta.nome="caneta"
+        caneta.quantidade=10
+        caneta.preco=1.50
+        var lapis = new Object()
+        lapis.nome="lapis"
+        lapis.quantidade=15
+        lapis.preco=1
+        var tela = ""
+        tela+="Produtos: "+produtos+ "<br>"
+        tela+= "<br>"+"Produto: "+caneta.nome+ "<br>";
+        tela+= "Quantidade: "+caneta.quantidade+ "<br>";
+        tela+= "Preço: "+caneta.preco+" reais"+ "<br>";
+        tela+= "<br>"+"Produto: "+lapis.nome+ "<br>";
+        tela+= "Quantidade: "+lapis.quantidade+ "<br>";
+        tela+= "Preço: "+lapis.preco+" reais"+ "<br>";
+        mostrar.innerHTML=tela
+    </script>
+    <!-- A função 'new Object()' serve para objetos elemetos em único elemento. Para adicionar, basta digitar o nome do elemento mais um ponto (.) e o nome do objeto -->
+</body>
+</html>
