@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Faça um algoritmo para trocar uma lâmpada.</h1>
+    <pre>
+        <code>
+            <script>
+                while (true) {
+                    var lampada = parseInt(prompt("Ligue a luz"));
+                    if (lampada != 1 && lampada != 0) {
+                        alert("Apenas tente ligar a luz, o interruptor só tem duas posições");
+                        continue
+                    }
+                    if (lampada == 1 || lampada == 0) {
+                        alert("Muito bem");
+                        break;
+                    }
+                }
+                if (lampada == 0) {
+                    alert("Infelizmente está quimada, troque a lampada");
+                } else if(lampada == 1){
+                    alert("A lampada está boa ainda, não precisa trocar");
+                }
+            </script>
+        </code>
+    </pre>
+    <script>
+        while (true) {
+            var lampada = parseInt(prompt("Ligue a luz"));
+            if (lampada != 1 && lampada != 0) {
+                alert("Apenas tente ligar a luz, o interruptor só tem duas posições");
+                continue
+            }
+            if (lampada == 1 || lampada == 0) {
+                alert("Muito bem");
+                break;
+            }
+        }
+        if (lampada == 0) {
+            alert("Infelizmente está quimada, troque a lampada");
+        } else if(lampada == 1){
+            alert("A lampada está boa ainda, não precisa trocar");
+        }
+    </script>
+</body>
+</html>
