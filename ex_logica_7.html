@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ler um número e verificar se ele é par ou ímpar. Quando for par armazenar esse valor em P e 
+    quando for ímpar armazená-lo em I. Exibir P e I no final do processamento.</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var num = parseFloat(prompt("Digite um valor:"));
+                var P = 0;
+                var I = 0;
+                if (num%2==0) {
+                    P+=num;
+                    alert("Numero solicitado foi "+ P + ", portanto é par");
+                }
+                if (num%2==1) {
+                    I+=num;
+                    alert("Numero solicitado foi "+ I + ", portanto é impar");
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var num = parseFloat(prompt("Digite um valor:"));
+        var P = 0;
+        var I = 0;
+        if (num%2==0) {
+            P+=num;
+            alert("Numero solicitado foi "+ P + ", portanto é par");
+        }
+        if (num%2==1) {
+            I+=num;
+            alert("Numero solicitado foi "+ I + ", portanto é impar");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sabendo-se que José tem direito a 15% de reajuste de salário, complete o diagrama 
+    abaixo</h1>
+    <pre>
+        <code>
+            &lt;script>
+                while (true) {
+                    var nome = prompt("Diga o nome do funcionário à receber o reajuste:")
+                    if (nome != "jose") {
+                        alert("Este funcionário não está autorizado para receber o reajuste agora.")
+                        continue
+                    } 
+                    if (nome == "jose") {
+                        break
+                    } 
+                }
+                while (true) {
+                    var reajuste = parseFloat(prompt("Digite o valor do reajuste:"));
+                    if (reajuste != 0.15) {
+                        alert("Este não é um reajuste certo");
+                        continue
+                    }
+                    if (reajuste == 0.15) {
+                        var salario = 1200;
+                        var salario_novo = (salario*0.15)+salario
+                        alert(" O novo salário de agora é " + salario_novo);
+                        break
+                    }
+                }   
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        while (true) {
+            var nome = prompt("Diga o nome do funcionário à receber o reajuste:")
+            if (nome != "jose") {
+                alert("Este funcionário não está autorizado para receber o reajuste agora.")
+                continue
+            } 
+            if (nome == "jose") {
+                break
+            } 
+        }
+        while (true) {
+            var reajuste = parseFloat(prompt("Digite o valor do reajuste:"));
+            if (reajuste != 0.15) {
+                alert("Este não é um reajuste certo");
+                continue
+            }
+            if (reajuste == 0.15) {
+                var salario = 1200;
+                var salario_novo = (salario*0.15)+salario
+                alert(" O novo salário de agora é " + salario_novo);
+                break
+            }
+        }   
+    </script>
+</body>
+</html>

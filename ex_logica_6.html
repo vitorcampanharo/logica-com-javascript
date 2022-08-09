@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Elabore um diagrama de blocos que leia um número. Se positivo armazene-o em A, se for negativo, em B. No final mostrar o resultado</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var valor = parseFloat(prompt("Digite um valor"));
+                var A = 0
+                var B = 0
+                if (valor>0) {
+                    A+=valor
+                    alert("O valor foi "+ A);
+                }
+                if (valor&lt;0) {
+                    B+=valor
+                    alert("O valor foi "+ B);
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var valor = parseFloat(prompt("Digite um valor"));
+        var A = 0
+        var B = 0
+        if (valor>0) {
+            A+=valor
+            alert("O valor foi "+ A);
+        }
+        if (valor<0) {
+            B+=valor
+            alert("O valor foi "+ B);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o 
+        rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o
+        estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar 
+        um multa de R$ 4,00 por quilo excedente. João precisa que você faça um diagrama de
+        blocos que leia a variável P (peso de peixes) e verifique se há excesso. Se houver, gravar 
+        na variável E (Excesso) e na variável M o valor da multa que João deverá pagar. Caso 
+        contrário mostrar tais variáveis com o conteúdo ZERO.
+        </h1>
+        <pre>
+            <code>
+                &lt;script>
+                    alert("ATENÇÃO PESCADORES!! limite máximo de peso é 50kg, caso exceda, será cobrado multa de 4R$ para cada kg excedido")
+                    var peso = parseInt(Math.random()*100);
+                    alert("Sua carga é de "+peso+"Kg");
+                    var P = 0
+                    var E = 0
+                    var M = 0
+                    if (peso&lt;=50) {
+                        P+=peso
+                        alert("Como sua carga não ultrapassou 50kg, não terá multa")
+                    }
+                    if (peso>50) {
+                        E=peso-50
+                        M=E*4
+                        alert("Seu peso extra é de "+E+"Kg, portanto pagará multa de "+ M + "R$");
+                    }
+                &lt;/script>
+            </code>
+        </pre>
+        <script>
+            alert("ATENÇÃO PESCADORES!! limite máximo de peso é 50kg, caso exceda, será cobrado multa de 4R$ para cada kg excedido")
+            var peso = parseInt(Math.random()*100);
+            alert("Sua carga é de "+peso+"Kg");
+            var P = 0
+            var E = 0
+            var M = 0
+            if (peso<=50) {
+                P+=peso
+                alert("Como sua carga não ultrapassou 50kg, não terá multa")
+            }
+            if (peso>50) {
+                E=peso-50
+                M=E*4
+                alert("Seu peso extra é de "+E+"Kg, portanto pagará multa de "+ M + "R$");
+            }
+        </script>
+        <!-- Parei na pag 31, ex 2 -->
+</body>
+</html>
