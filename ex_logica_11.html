@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elabore um diagrama de bloco que leia   as variáveis C e N, respectivamente código e
+        número de horas trabalhadas de um operário. E calcule o salário sabendo-se que ele 
+        ganha R$ 10,00 por hora. Quando o número de horas exceder a 50 calcule o excesso de
+        pagamento armazenando-o na variável E, caso contrário zerar tal variável. A hora 
+        excedente de trabalho vale R$ 20,00. No final do processamento imprimir o salário total e o
+        salário excedente.</h1>
+        <pre>
+            <code>
+                &lt;script>
+                    alert("ATENÇÃO TRABALHADORES !!! A hora trabalhada vale 10R$ até 50 horas, as horas excedentes valem 20R$")
+                    var codigo_operario = parseInt(Math.random()*1000);
+                    var horas = parseInt(Math.random()*100);
+                    var limite_horario = 50;
+                    var salario_hora = 10;
+                    var salario_extra = 20;
+                    var  salario_base = limite_horario*salario_hora;
+                    
+                    alert("Atenção trabalhador de código "+ codigo_operario + ", você trabalhou "+ horas + " horas.");
+                    if (horas&lt;=50) {
+                        alert("Como você trabalhou apenas "+ horas + " horas, receberá "+ horas*salario_hora+" reais.");
+                    }
+                    if (horas>50) {
+                        var hora_extra = horas-limite_horario;
+                        alert("Como você excedeu o limite de horário em "+ hora_extra + " horas, você receberá "+salario_base+ " reais de salário base, mais "+ hora_extra*salario_extra + " reais de horas extras, totalizando " + (hora_extra*salario_extra+salario_base) + " reais");
+                    }
+                &lt;/script>
+            </code>
+        </pre>
+        <script>
+            alert("ATENÇÃO TRABALHADORES !!! A hora trabalhada vale 10R$ até 50 horas, as horas excedentes valem 20R$")
+            var codigo_operario = parseInt(Math.random()*1000);
+            var horas = parseInt(Math.random()*100);
+            var limite_horario = 50;
+            var salario_hora = 10;
+            var salario_extra = 20;
+            var  salario_base = limite_horario*salario_hora;
+            
+            alert("Atenção trabalhador de código "+ codigo_operario + ", você trabalhou "+ horas + " horas.");
+            if (horas<=50) {
+                alert("Como você trabalhou apenas "+ horas + " horas, receberá "+ horas*salario_hora+" reais.");
+            }
+            if (horas>50) {
+                var hora_extra = horas-limite_horario;
+                alert("Como você excedeu o limite de horário em "+ hora_extra + " horas, você receberá "+salario_base+ " reais de salário base, mais "+ hora_extra*salario_extra + " reais de horas extras, totalizando " + (hora_extra*salario_extra+salario_base) + " reais");
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elabore um algoritmo que dada a idade de um nadador classifique-o em uma das 
+        seguintes categorias:
+        Infantil A = 5 a 7 anos
+        Infantil B = 8 a 11 anos
+        Juvenil A = 12 a 13 anos
+        Juvenil B = 14 a 17 anos
+        Adultos = Maiores de 18 anos</h1>
+        <pre>
+            <code>
+                &lt;script>
+                    var idade = parseInt(Math.random()*20);
+                    alert("Sua idade é de " + idade + " anos");
+                    if (idade&lt;5) {
+                        alert("infelizmente não tem idade mínima");
+                    }
+                    if (idade>=5 && idade&lt;=7) {
+                        alert("Você será encaixado no infantil A");
+                    } else if (idade>=8 && idade&lt;=11){
+                        alert("Você será encaixado no infantil B");
+                    } else if (idade>=12 && idade&lt;=13){
+                        alert("Você será encaixado no juvenil A");
+                    } else if (idade>=14 && idade&lt;=17){
+                        alert("Você será encaixado no juvenil B");
+                    } else if (idade>=18){
+                        alert("Você será encaixado no adultos");
+                    }
+                &lt;/script>
+            </code>
+        </pre>
+        <script>
+            var idade = parseInt(Math.random()*20);
+            alert("Sua idade é de " + idade + " anos");
+            if (idade<5) {
+                alert("infelizmente não tem idade mínima");
+            }
+            if (idade>=5 && idade<=7) {
+                alert("Você será encaixado no infantil A");
+            } else if (idade>=8 && idade<=11){
+                alert("Você será encaixado no infantil B");
+            } else if (idade>=12 && idade<=13){
+                alert("Você será encaixado no juvenil A");
+            } else if (idade>=14 && idade<=17){
+                alert("Você será encaixado no juvenil B");
+            } else if (idade>=18){
+                alert("Você será encaixado no adultos");
+            }
+        </script>
+</body>
+</html>

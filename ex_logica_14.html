@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>A Secretaria de Meio Ambiente que controla o índice de poluição mantém 3 grupos de 
+    indústrias que são altamente poluentes do meio ambiente. O índice de poluição aceitável 
+    varia de 0,05 até 0,25. Se o índice sobe para 0,3 as indústrias do 1º grupo são intimadas a 
+    suspenderem suas atividades, se o índice crescer para 0,4 as industrias do 1º e 2º grupo 
+    são intimadas a suspenderem suas atividades, se o índice atingir 0,5 todos os grupos 
+    devem ser notificados a paralisarem suas atividades. Faça um diagrama de bloco que leia 
+    o índice de poluição medido e emita a notificação adequada aos diferentes grupos de 
+    empresas</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var poluicao = parseFloat(Math.random()*1);
+                alert("O nível de poluição media foi de " + poluicao);
+                if (poluicao&lt;0.3) {
+                    alert("Parabens, estão dentro da margem de segurança");
+                }
+                if (poluicao>=0.3 && poluicao&lt;0.4) {
+                    alert("Empresas do grupo 1, encerrem suas atividades");
+                } else if (poluicao>=0.4 && poluicao&lt;0.5){
+                    alert("Empresa do grupo 1 e 2, encerrem suas atividades");
+                } else if (poluicao>=0.5) {
+                    alert("Todas as empresas de todos os grupos, encerrem suas atividades");
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var poluicao = parseFloat(Math.random()*1);
+        alert("O nível de poluição media foi de " + poluicao);
+        if (poluicao<0.3) {
+            alert("Parabens, estão dentro da margem de segurança");
+        }
+        if (poluicao>=0.3 && poluicao<0.4) {
+            alert("Empresas do grupo 1, encerrem suas atividades");
+        } else if (poluicao>=0.4 && poluicao<0.5){
+            alert("Empresa do grupo 1 e 2, encerrem suas atividades");
+        } else if (poluicao>=0.5) {
+            alert("Todas as empresas de todos os grupos, encerrem suas atividades");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Leia quatro números; calcule o quadrado de cada um; se o valor do quadrado do terceiro for maior ou igual a 1000, imprima na tela. caso contrário,  imprima os valores lidos e seus respectivos quadrados.
+    </h1>
+    <script>
+        var num1 = parseInt(prompt("Digite o primeiro número:"));
+        var num2 = parseInt(prompt("Digite o segundo número:"));
+        var num3 = parseInt(prompt("Digite o tereceiro número:"));
+        var num4 = parseInt(prompt("Digite o quarto número:"));
+        var quadrado_num1 = num1*num1
+        var quadrado_num2 = num2*num2
+        var quadrado_num3 = num3*num3
+        var quadrado_num4 = num4*num4
+        if (quadrado_num3>=1000) {
+            alert(quadrado_num3);
+        } else if (quadrado_num3<1000){
+            alert("O primeiro número é " + num1 + ", e seu quadrado é " + quadrado_num1);
+            alert("O segundo número é " + num2 + ", e seu quadrado é " + quadrado_num2);
+            alert("O terceiro número é " + num3 + ", e seu quadrado é " + quadrado_num3);
+            alert("O quarto número é " + num4 + ", e seu quadrado é " + quadrado_num4);
+        }
+    </script>
+</body>
+</html>
