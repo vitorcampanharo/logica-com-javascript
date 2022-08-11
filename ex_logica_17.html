@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Construa um algoritmo que leia 500 valores inteiros e positivos e:
+        • Encontre o maior valor
+        • Encontre o menor valor
+        • Calcule a média dos números lidos
+        </h1>
+        <pre>
+            <code>
+
+            </code>
+        </pre>
+        <button onclick="par()">Números pares</button>
+        <button onclick="impar()">Números impares</button>
+        <button onclick="media()">Média</button>
+        <div id="campo"></div>
+        <script>
+            var campo = document.querySelector("#campo");
+            var campo_calculado = ""
+            for(i=0; i<=500; i++){
+                campo_calculado+=i + "<br>";
+            }
+            campo.innerHTML=campo_calculado
+            function par() {
+                var campo = document.querySelector("#campo");
+                var campo_calculado = ""
+                for(i=0; i<=500; i++){
+                    if (i%2==0) {
+                    campo_calculado+=i + "<br>";
+                    }
+                }
+                campo.innerHTML=campo_calculado
+            }
+            function impar() {
+                var campo = document.querySelector("#campo");
+                var campo_calculado = ""
+                for(i=0; i<=500; i++){
+                    if (i%2==1) {
+                    campo_calculado+=i + "<br>";
+                    }
+                }
+                campo.innerHTML=campo_calculado
+            }  
+            function media() {
+                var campo = document.querySelector("#campo");
+                var todos = 0
+                for(i=0; i<500; i++){
+                    todos+=i/500 
+                }
+                campo.innerHTML=todos
+            }
+        </script>
+</body>
+</html>
