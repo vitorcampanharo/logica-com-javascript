@@ -9,18 +9,20 @@
 <body>
     <h1>Outra forma de escrever arrays e objetos</h1>
     <div id="mostrar"></div>
-    <div id="mostrar2"></div>
     <script>
-        var produtos = ["caneta", " lapis", " borrahca"];
-        var produtos_catalogo = {"nome": "caneta", "quantidade": "10", "preco": "1.50"};
-        var tela =""
-        tela+=produtos_catalogo
+        var produtos = {
+            produto: ["caneta", "lapis", "borracha"],
+            preco: [0.50, 0.20, 0.30],
+            estoque: [200, 100, 50]
+        };
         var mostrar = document.querySelector("#mostrar");
-        var mostrar2 = document.querySelector("#mostrar2");
-        console.log(produtos_catalogo)
-        mostrar.innerHTML=produtos
-        mostrar2.innerHTML=tela
+        
+        var tela = "";
+        
+        tela += "produto: " + produtos.produto[0] + "<br>" + "preço: " + produtos.preco[0] + "<br>" + "quantidade: " + produtos.estoque[0] + "<br>" + "<br>" + "produto: " + produtos.produto[1] + "<br>" + "preço: " + produtos.preco[1] + "<br>" + "quantidade: " + produtos.estoque[1] + "<br>" + "<br>" + "produto: " + produtos.produto[2] + "<br>" + "preço: " + produtos.preco[2] + "<br>" + "quantidade: " + produtos.estoque[2] + "<br>"
+        
+        mostrar.innerHTML=tela
     </script>
-    <!-- Falta termianr!!! -->
+    <!-- Esta é uma forma de se escrever Array dentro de objetos. Objetos sempre estão detro de chaves {}, e Array sempre dentro de colchetes []. Existem outras formas de se escrever a mesma coisa, mas esta é uma das maneiras mais enxutas. -->
 </body>
 </html>
