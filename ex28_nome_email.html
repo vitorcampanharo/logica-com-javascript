@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sua missão será criar um array com três objetos. Cada objeto deverá ter duas propriedades (nome e email). </h1>
+    <pre>
+        <code>
+            &lt;div id="campo">&lt;/div>
+            &lt;script>
+                var dados = {
+                    Email:["vitor@gmail.com", "alves@hotmail.com", "juju@live.com"],
+                    Nome:["vitor", "alves", "juju"],
+                }
+                var msg = ""
+                msg+="Email: " + dados.Email[0] + "&lt;br>" + "Nome: " + dados.Nome[0] + "&lt;br>" + "&lt;br>" + "Email: " + dados.Email[1] + "&lt;br>" + "Nome: " + dados.Nome[1] + "&lt;br>" + "&lt;br>" + "Email: " + dados.Email[2] + "&lt;br>" + "Nome: " + dados.Nome[2] + "&lt;br>"
+                document.querySelector("#campo").innerHTML=msg
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="campo"></div>
+    <script>
+        var dados = {
+            Email:["vitor@gmail.com", "alves@hotmail.com", "juju@live.com"],
+            Nome:["vitor", "alves", "juju"],
+        }
+        var msg = ""
+        msg+="Email: " + dados.Email[0] + "<br>" + "Nome: " + dados.Nome[0] + "<br>" + "<br>" + "Email: " + dados.Email[1] + "<br>" + "Nome: " + dados.Nome[1] + "<br>" + "<br>" + "Email: " + dados.Email[2] + "<br>" + "Nome: " + dados.Nome[2] + "<br>"
+        document.querySelector("#campo").innerHTML=msg
+    </script>
+    <!-- Mais um exemplo de Array dentro de objetos. Na linha 33, o código "document.querySelector("#campo").innerHTML=msg" é uma forma simplificada para transmitir o conteúdo para a tela HTML. -->
+</body>
+</html>

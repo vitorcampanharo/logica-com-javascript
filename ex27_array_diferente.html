@@ -8,6 +8,25 @@
 </head>
 <body>
     <h1>Outra forma de escrever arrays e objetos</h1>
+    <pre>
+        <code>
+            &lt;div id="mostrar">&lt;/div>
+            &lt;script>
+                var produtos = {
+                    produto: ["caneta", "lapis", "borracha"],
+                    preco: [0.50, 0.20, 0.30],
+                    estoque: [200, 100, 50]
+                };
+                var mostrar = document.querySelector("#mostrar");
+                
+                var tela = "";
+                
+                tela += "produto: " + produtos.produto[0] + "&lt;br>" + "preço: " + produtos.preco[0] + "&lt;br>" + "quantidade: " + produtos.estoque[0] + "&lt;br>" + "&lt;br>" + "produto: " + produtos.produto[1] + "&lt;br>" + "preço: " + produtos.preco[1] + "&lt;br>" + "quantidade: " + produtos.estoque[1] + "&lt;br>" + "&lt;br>" + "produto: " + produtos.produto[2] + "&lt;br>" + "preço: " + produtos.preco[2] + "&lt;br>" + "quantidade: " + produtos.estoque[2] + "&lt;br>"
+                
+                mostrar.innerHTML=tela
+            &lt;/script>
+        </code>
+    </pre>
     <div id="mostrar"></div>
     <script>
         var produtos = {
@@ -23,6 +42,5 @@
         
         mostrar.innerHTML=tela
     </script>
-    <!-- Esta é uma forma de se escrever Array dentro de objetos. Objetos sempre estão detro de chaves {}, e Array sempre dentro de colchetes []. Existem outras formas de se escrever a mesma coisa, mas esta é uma das maneiras mais enxutas. -->
 </body>
 </html>
