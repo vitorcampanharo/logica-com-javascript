@@ -77,45 +77,24 @@
         <button onclick="incluirPonto()">,</button> 
 	</div>
     <script>
-        var n1 = "0"
-        var operacao = null
-        var result = 0
+        var n1 = "0";
+        var operacao = null;
+        var n2 = "";
         function incluirDigito(digito) {
             if (n1 === "0") {
                 n1 = digito;
             } else{
-                n1+=digito
+                n1+=digito;
             }
-            console.log(n1)
-            document.querySelector("#display").innerHTML=n1
+            document.querySelector("#display").innerHTML=n1;
+            if (operacao !== null) {
+                n2+=digito
+                document.querySelector("#display").innerHTML=n2
+            }
         }
         function iniciarCalculo(operador) {
-            if (operador === "+") {
-                operacao = operador
-                n1+=operacao
-            } else if (operador === "-") {
-                operacao = operador
-                n1+=operacao
-            } else if (operador === "/"){
-                operacao = operador
-                n1+=operacao
-            } else if (operador === "*") {
-                operacao = operador
-                n1+=operacao
-            }
-        }
-        function finalizarCalculo() {
-            if (operacao === "+") {
-                parseFloat(n1);
-                result=n1
-                result+=n1;
-                document.querySelector("#display").innerHTML=result
-            }
-        }
-            
-        function limpar() {
-            var num_vazio = 0
-            document.querySelector("#display").innerHTML=num_vazio
+            operacao = operador;
+            console.log(n1, operacao, n2)
         }
     </script>
 </body>
