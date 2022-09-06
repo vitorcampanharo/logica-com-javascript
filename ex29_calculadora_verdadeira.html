@@ -81,15 +81,16 @@
         var operacao = null;
         var n2 = "";
         function incluirDigito(digito) {
-            if (n1 === "0") {
-                n1 = digito;
+            if (operacao !== null) {
+                n2+=digito
+                document.querySelector("#display").innerHTML=n2
+            } else {
+                if (n1 === "0") {
+                    n1 = digito;
             } else{
                 n1+=digito;
             }
             document.querySelector("#display").innerHTML=n1;
-            if (operacao !== null) {
-                n2+=digito
-                document.querySelector("#display").innerHTML=n2
             }
         }
         function iniciarCalculo(operador) {

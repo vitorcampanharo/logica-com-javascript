@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loteria</h1>
+    <script>
+        function sorteio() {
+            return Math.floor(Math.random()*50)
+        }
+        var num = parseInt(prompt("Digite seu número:"));
+        var sorteado = [];
+        for (var i=0; i<5; i++){
+            sorteado[i]=sorteio();
+            alert("Os números sorteados foram "+ sorteado);
+        }
+        if (num == sorteado[0] || num == sorteado[1] || num == sorteado[2] || num == sorteado[3] || num == sorteado[4]) {
+            alert("Parabens, vc foi sorteado")
+        } else{
+            alert("Infelizmente seu número não foi sorteado")
+        }
+    </script>
+</body>
+</html>

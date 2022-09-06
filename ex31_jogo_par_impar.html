@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;h1>Jogo do par ou impar&lt;/h1>
+            &lt;form action="">
+            &lt;p>
+                &lt;label for="number">Digite um número de 0 a 10&lt;/label>
+                &lt;input type="number" name="numero" id="number" required>
+            &lt;/p>
+            &lt;/form>
+            &lt;button onclick="jogar()">Jogar&lt;/button>
+            &lt;p>Resultado: &lt;span id="tela">&lt;/span>&lt;/p>
+            &lt;script>
+                function jogar() {
+                    var num = document.getElementById("number").value;
+                    if (num>10 || num&lt;0) {
+                        var msg = "";
+                        msg+="Apenas números de 0 a 10, por favor";
+                        document.querySelector("#tela").innerHTML=msg
+                    }
+                    if (num &lt;= 10 && num >=0) {
+                        if (num%2==0) {
+                            var msg = "";
+                            msg+="É par";
+                            document.querySelector("#tela").innerHTML=msg
+                        } else if (num%2==1){
+                            var msg = "";
+                            msg+="É impar";
+                            document.querySelector("#tela").innerHTML=msg
+                        }
+                    }          
+                }
+                function apagar() {
+                    var msg = ""
+                    document.querySelector("#tela").innerHTML=msg
+                    var num = document.getElementById("number").value=null;
+                }       
+            &lt;/script>
+        </code>
+    </pre>
+    
+    <h1>Jogo do par ou impar</h1>
+    <form action="">
+        <p>
+            <label for="number">Digite um número de 0 a 10</label>
+            <input type="number" name="numero" id="number" required>
+        </p>
+    </form>
+    <button onclick="jogar()">Jogar</button>
+    <button onclick="apagar()"> Apagar</button>
+    <p>Resultado: <span id="tela"></span></p>
+    <script>
+        function jogar() {
+            var num = document.getElementById("number").value;
+            if (num>10 || num<0) {
+                var msg = "";
+                msg+="Apenas números de 0 a 10, por favor";
+                document.querySelector("#tela").innerHTML=msg
+            }
+            if (num <= 10 && num >=0) {
+                if (num%2==0) {
+                    var msg = "";
+                    msg+="É par";
+                    document.querySelector("#tela").innerHTML=msg
+                } else if (num%2==1){
+                    var msg = "";
+                    msg+="É impar";
+                    document.querySelector("#tela").innerHTML=msg
+                }
+            }          
+        }
+        function apagar() {
+            var msg = ""
+            document.querySelector("#tela").innerHTML=msg
+            var num = document.getElementById("number").value=null;
+        }       
+    </script>
+    <!-- Exercício do jogo de par ou impar -->
+</body>
+</html>
