@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Em cada bimestre um aluno possui quatro notas de 0 a 10 de uma determinada matéria Dado um array multi-dimensional que as representa, mostrar na tela as notas e a média de cada bimestre assim como a média anual.</h1>
+    <pre>
+        <code>
+            &lt;div id="tela"></div>
+            &lt;script>
+                var bimestres = {
+                    nota_bimestre_1:[4, 8.8, 9.5, 10],
+                    nota_bimestre_2:[8, 9, 4.6, 6],
+                    nota_bimestre_3:[3.5, 8.5, 4.5, 10],
+                    nota_bimestre_4:[7, 8, 10, 10],
+                };
+                
+                var media_bimestre_1 = bimestres.nota_bimestre_1[0]+bimestres.nota_bimestre_1[1]+bimestres.nota_bimestre_1[2]+bimestres.nota_bimestre_1[3]/4;
+                
+                var media_bimestre_2 = bimestres.nota_bimestre_2[0]+bimestres.nota_bimestre_2[1]+bimestres.nota_bimestre_2[2]+bimestres.nota_bimestre_2[3]/4;
+        
+                var media_bimestre_3 = bimestres.nota_bimestre_3[0]+bimestres.nota_bimestre_3[1]+bimestres.nota_bimestre_3[2]+bimestres.nota_bimestre_3[3]/4;        
+                
+                var media_bimestre_4 = bimestres.nota_bimestre_4[0]+bimestres.nota_bimestre_4[1]+bimestres.nota_bimestre_4[2]+bimestres.nota_bimestre_4[3]/4;
+        
+                var media_anual = media_bimestre_1+media_bimestre_2+media_bimestre_3+media_bimestre_4/4;
+                
+                var tela = "";
+                tela+="Notas primeiro bimestre: " + bimestres.nota_bimestre_1[0] +", "+ bimestres.nota_bimestre_1[1] +", "+ bimestres.nota_bimestre_1[2] +", "+ bimestres.nota_bimestre_1[3] +", "+ "&lt;br>" + "Média primeiro bimestre: "+media_bimestre_1 + "&lt;hr>" +
+
+                "Notas segundo bimestre: " + bimestres.nota_bimestre_2[0] +", "+ bimestres.nota_bimestre_2[1] +", "+ bimestres.nota_bimestre_2[2] +", "+ bimestres.nota_bimestre_2[3] +", "+ "&lt;br>" + "Média segundo bimestre: "+media_bimestre_2 + "&lt;hr>" +
+
+                "Notas terceiro bimestre: " + bimestres.nota_bimestre_3[0] +", "+ bimestres.nota_bimestre_3[1] +", "+ bimestres.nota_bimestre_3[2] +", "+ bimestres.nota_bimestre_3[3] +", "+ "&lt;br>" + "Média terceiro bimestre: "+media_bimestre_3 + "&lt;hr>" +
+
+                "Notas quarto bimestre: " + bimestres.nota_bimestre_4[0] +", "+ bimestres.nota_bimestre_4[1] +", "+ bimestres.nota_bimestre_4[2] +", "+ bimestres.nota_bimestre_4[3] +", "+ "&lt;br>" + "Média quarto bimestre: "+media_bimestre_4 + "&lt;hr>" +
+
+                "Média anual: " + media_anual;
+        
+                document.querySelector("#tela").innerHTML=tela;
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="tela"></div>
+    <script>
+        var bimestres = {
+            nota_bimestre_1:[4, 8.8, 9.5, 10],
+            nota_bimestre_2:[8, 9, 4.6, 6],
+            nota_bimestre_3:[3.5, 8.5, 4.5, 10],
+            nota_bimestre_4:[7, 8, 10, 10],
+        };
+        
+        var media_bimestre_1 = bimestres.nota_bimestre_1[0]+bimestres.nota_bimestre_1[1]+bimestres.nota_bimestre_1[2]+bimestres.nota_bimestre_1[3]/4;
+        
+        var media_bimestre_2 = bimestres.nota_bimestre_2[0]+bimestres.nota_bimestre_2[1]+bimestres.nota_bimestre_2[2]+bimestres.nota_bimestre_2[3]/4;
+
+        var media_bimestre_3 = bimestres.nota_bimestre_3[0]+bimestres.nota_bimestre_3[1]+bimestres.nota_bimestre_3[2]+bimestres.nota_bimestre_3[3]/4;        
+        
+        var media_bimestre_4 = bimestres.nota_bimestre_4[0]+bimestres.nota_bimestre_4[1]+bimestres.nota_bimestre_4[2]+bimestres.nota_bimestre_4[3]/4;
+
+        var media_anual = media_bimestre_1+media_bimestre_2+media_bimestre_3+media_bimestre_4/4;
+        
+        var tela = "";
+        tela+="Notas primeiro bimestre: " + bimestres.nota_bimestre_1[0] +", "+ bimestres.nota_bimestre_1[1] +", "+ bimestres.nota_bimestre_1[2] +", "+ bimestres.nota_bimestre_1[3] +", "+ "<br>" + "Média primeiro bimestre: "+media_bimestre_1 + "<hr>" +
+
+        "Notas segundo bimestre: " + bimestres.nota_bimestre_2[0] +", "+ bimestres.nota_bimestre_2[1] +", "+ bimestres.nota_bimestre_2[2] +", "+ bimestres.nota_bimestre_2[3] +", "+ "<br>" + "Média segundo bimestre: "+media_bimestre_2 + "<hr>" +
+
+        "Notas terceiro bimestre: " + bimestres.nota_bimestre_3[0] +", "+ bimestres.nota_bimestre_3[1] +", "+ bimestres.nota_bimestre_3[2] +", "+ bimestres.nota_bimestre_3[3] +", "+ "<br>" + "Média terceiro bimestre: "+media_bimestre_3 + "<hr>" +
+
+        "Notas quarto bimestre: " + bimestres.nota_bimestre_4[0] +", "+ bimestres.nota_bimestre_4[1] +", "+ bimestres.nota_bimestre_4[2] +", "+ bimestres.nota_bimestre_4[3] +", "+ "<br>" + "Média quarto bimestre: "+media_bimestre_4 + "<hr>" +
+
+        "Média anual: " + media_anual;
+        
+        document.querySelector("#tela").innerHTML=tela;
+    </script>
+</body>
+</html>
