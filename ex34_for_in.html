@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostrar na tela seus dados como nome, sobrenome, cpf, tel, usando loop for in</h1>
+    <pre>
+        <code>
+            &lt;script>
+                var dados = {
+                    Nome: ["Vitor","juju"],
+                    Sobrenome: ["Campanharo","Mendonça"],
+                    CPF: ["169.194.577-33","459.635.985-85"],
+                    TEL: ["21 974072185","21 974582548"]
+                }
+                var tela = "";
+                for(propriedade in dados){
+                    tela+=propriedade+": "+dados[propriedade][0] + "&lt;br>";
+                }
+                tela+="&lt;br>"+"&lt;br>"
+                for(propriedade in dados){
+                    tela+=propriedade+": "+dados[propriedade][1] + "&lt;br>";
+                }
+                document.querySelector("#tela").innerHTML=tela
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="tela"></div>
+    <script>
+        var dados = {
+            Nome: ["Vitor","juju"],
+            Sobrenome: ["Campanharo","Mendonça"],
+            CPF: ["169.194.577-33","459.635.985-85"],
+            TEL: ["21 974072185","21 974582548"]
+        }
+        var tela = "";
+        for(propriedade in dados){
+            tela+=propriedade+": "+dados[propriedade][0] + "<br>";
+        }
+        tela+="<br>"+"<br>"
+        for(propriedade in dados){
+            tela+=propriedade+": "+dados[propriedade][1] + "<br>";
+        }
+        document.querySelector("#tela").innerHTML=tela
+    </script>
+    <!-- O mesmo exercício, só que com complemento. É possível usar várias Arrays usando o método matriz -->
+</body>
+</html>

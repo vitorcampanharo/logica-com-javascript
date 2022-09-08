@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;script>
+                var alunos = {
+                    Nome: ["daniel", "josé", "joão", "marla", "ana"],
+                    id: [453248, 597842, 793125, 891258, 632854],
+                    endereco: ["rua tal, n56", "rua aquela n90", "rua essa n71", "rua alí n23", "rua lá n76"],
+                }
+                var tela = "";
+                for(propriedade in alunos){
+                    tela+=propriedade + ": " + alunos[propriedade][0] +"&lt;br>"
+                }
+                tela+="&lt;br>" + "&lt;hr>" + "&lt;br>"
+                for(propriedade in alunos){
+                    tela+=propriedade + ": " + alunos[propriedade][1] +"&lt;br>"
+                }
+                tela+="&lt;br>" + "&lt;hr>" + "&lt;br>"
+                for(propriedade in alunos){
+                    tela+=propriedade + ": " + alunos[propriedade][2] +"&lt;br>"
+                }
+                tela+="&lt;br>" + "&lt;hr>" + "&lt;br>"
+                for(propriedade in alunos){
+                    tela+=propriedade + ": " + alunos[propriedade][3] +"&lt;br>"
+                }
+                tela+="&lt;br>" + "&lt;hr>" + "&lt;br>"
+                for(propriedade in alunos){
+                    tela+=propriedade + ": " + alunos[propriedade][4] +"&lt;br>"
+                }
+                tela+="&lt;br>" + "&lt;hr>" + "&lt;br>"
+                document.querySelector("#tela").innerHTML=tela
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="tela"></div>
+    <script>
+        var alunos = {
+            Nome: ["daniel", "josé", "joão", "marla", "ana"],
+            id: [453248, 597842, 793125, 891258, 632854],
+            endereco: ["rua tal, n56", "rua aquela n90", "rua essa n71", "rua alí n23", "rua lá n76"],
+        }
+        var tela = "";
+        for(propriedade in alunos){
+            tela+=propriedade + ": " + alunos[propriedade][0] +"<br>"
+        }
+        tela+="<br>" + "<hr>" + "<br>"
+        for(propriedade in alunos){
+            tela+=propriedade + ": " + alunos[propriedade][1] +"<br>"
+        }
+        tela+="<br>" + "<hr>" + "<br>"
+        for(propriedade in alunos){
+            tela+=propriedade + ": " + alunos[propriedade][2] +"<br>"
+        }
+        tela+="<br>" + "<hr>" + "<br>"
+        for(propriedade in alunos){
+            tela+=propriedade + ": " + alunos[propriedade][3] +"<br>"
+        }
+        tela+="<br>" + "<hr>" + "<br>"
+        for(propriedade in alunos){
+            tela+=propriedade + ": " + alunos[propriedade][4] +"<br>"
+        }
+        tela+="<br>" + "<hr>" + "<br>"
+        document.querySelector("#tela").innerHTML=tela
+    </script>
+</body>
+</html>
