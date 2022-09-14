@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1) Escreva um algoritmo que armazene o  valor 10 em uma variável A e o valor 20 em uma variável B. 
+    A seguir (utilizando apenas atribuições entre variáveis) troque os seus conteúdos fazendo com que o 
+    valor que está em A passe para B e vice-versa. Ao final, escrever os valores que ficaram armazenados 
+    nas variáveis. </h1>
+    <pre>
+        <code>
+            var A = 10;
+            var B = 20;
+            var msg = "";
+            msg+="A: "+A+"&lt;br>"+"B: "+B+"&lt;br>"+"&lt;br>"
+            document.querySelector("#tela").innerHTML=msg
+            if (A===10) {
+                A=20
+            }
+            if (B===20) {
+                B=10
+            }
+            msg+="A: "+A+"&lt;br>"+"B: "+B+"&lt;br>"
+            document.querySelector("#tela").innerHTML=msg
+        </code>
+    </pre>
+    <div id="tela"></div>
+    <script>
+        var A = 10;
+        var B = 20;
+        var msg = "";
+        msg+="A: "+A+"<br>"+"B: "+B+"<br>"+"<br>"
+        document.querySelector("#tela").innerHTML=msg
+        if (A===10) {
+            A=20
+        }
+        if (B===20) {
+            B=10
+        }
+        msg+="A: "+A+"<br>"+"B: "+B+"<br>"
+        document.querySelector("#tela").innerHTML=msg
+    </script>
+</body>
+</html>

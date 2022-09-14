@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #retangulo{
+            border-style: solid;
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>6) Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a 
+    área do retângulo.</h1>
+    <pre>
+        <code>
+            &lt;div id="retangulo">&lt;/div>
+            &lt;form action="">
+                &lt;p>
+                    &lt;label for="ialtura">Altura&lt;/label>
+                    &lt;input type="text" id="ialtura" required>
+                &lt;/p>
+                &lt;p>
+                    &lt;label for="ilargura">Largura</label>
+                    &lt;input type="text" id="ilargura" required>
+                &lt;/p>
+            &lt;/form>
+            &lt;button onclick="calcular()">Calcular&lt;/button>
+            &lt;p>Área: &lt;span id="result">&lt;/span>&lt;/p>
+            &lt;script>
+                function calcular() {
+                    var altura = document.getElementById("ialtura").value;
+                    var largura = document.getElementById("ilargura").value;          
+                    var area = (altura*largura) + "cm2"
+                    document.querySelector("#result").innerHTML=area
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <div id="retangulo"></div>
+    <form action="">
+        <p>
+            <label for="ialtura">Altura</label>
+            <input type="text" id="ialtura" required>
+        </p>
+        <p>
+            <label for="ilargura">Largura</label>
+            <input type="text" id="ilargura" required>
+        </p>
+    </form>
+    <button onclick="calcular()">Calcular</button>
+    <p>Área: <span id="result"></span></p>
+    <script>
+        function calcular() {
+            var altura = document.getElementById("ialtura").value;
+            var largura = document.getElementById("ilargura").value;          
+            var area = (altura*largura) + "cm2"
+            document.querySelector("#result").innerHTML=area
+        }
+    </script>
+</body>
+</html>

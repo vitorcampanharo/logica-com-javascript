@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>7) Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade 
+    dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. </h1>
+    <pre>
+        <code>
+            &lt;script>
+                var ano = parseInt(prompt("Qual sua idade em anos: "));
+                var mes = parseInt(prompt("Qual sua idade em meses: "));
+                var dia = parseInt(prompt("Qual sua idade em dias: "));
+                if (ano>=1) {
+                    ano=(ano*12)*30
+                }
+                if (mes>=1) {
+                    mes*=30
+                }
+                var idade = ano+mes+dia
+                alert("Você tem " + idade + " dias de vida");
+                // OBS: Se colocar "ano+mes+idade" no "alert", os números irão concatenar e não somar. É necessário criar uma varável separada para fazer a soma desses valores, e adicionar essa mesma varável no "alert".
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var ano = parseInt(prompt("Qual sua idade em anos: "));
+        var mes = parseInt(prompt("Qual sua idade em meses: "));
+        var dia = parseInt(prompt("Qual sua idade em dias: "));
+        if (ano>=1) {
+            ano=(ano*12)*30
+        }
+        if (mes>=1) {
+            mes*=30
+        }
+        var idade = ano+mes+dia
+        alert("Você tem " + idade + " dias de vida");
+        // OBS: Se colocar "ano+mes+idade" no "alert", os números irão concatenar e não somar. É necessário criar uma varável separada para fazer a soma desses valores, e adicionar essa mesma varável no "alert".
+    </script>
+</body>
+</html>
