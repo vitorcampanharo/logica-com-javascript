@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code>
+            &lt;script>
+                while (true) {
+                    var eleitores = parseInt(prompt("Número de eleitores:"));
+                    var votos = parseInt(prompt("Total de votos:"));
+                    var votosTotais = 0
+                    if (eleitores &lt; votos) {
+                        alert("Não é possível ter mais votos contados do que eleitores disponíveis");
+                        continue
+                    }            
+                    if (eleitores >= votos) {
+                        var brancos = parseInt(prompt("Votos brancos:"));
+                        var nulos = parseInt(prompt("Votos nulos:"));
+                        var validos = parseInt(prompt("Votos validos"));
+                        votosTotais+=brancos+nulos+validos
+                        if (votosTotais > eleitores || votosTotais > votos || votosTotais &lt; votos) {
+                            alert("Há algo de errado, a contagem de votos não está batendo com os votantes")
+                            continue
+                        } else{
+                            break
+                        }
+                    }
+                }
+                var porcentBrancos = brancos*votosTotais
+                var porcentNulos = nulos*votosTotais
+                var porcentValidos = validos*votosTotais
+        
+                alert("No total foram " + votosTotais + " votos. " + porcentBrancos + "% de votos brancos, " + porcentNulos + "% de votos nulos, e " + porcentValidos + "% de votos válidos.")
+        
+                console.log(eleitores, brancos, nulos, validos, votosTotais);
+                
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        while (true) {
+            var eleitores = parseInt(prompt("Número de eleitores:"));
+            var votos = parseInt(prompt("Total de votos:"));
+            var votosTotais = 0
+            if (eleitores < votos) {
+                alert("Não é possível ter mais votos contados do que eleitores disponíveis");
+                continue
+            }            
+            if (eleitores >= votos) {
+                var brancos = parseInt(prompt("Votos brancos:"));
+                var nulos = parseInt(prompt("Votos nulos:"));
+                var validos = parseInt(prompt("Votos validos"));
+                votosTotais+=brancos+nulos+validos
+                if (votosTotais > eleitores || votosTotais > votos || votosTotais < votos) {
+                    alert("Há algo de errado, a contagem de votos não está batendo com os votantes")
+                    continue
+                } else{
+                    break
+                }
+            }
+        }
+        var porcentBrancos = brancos*votosTotais
+        var porcentNulos = nulos*votosTotais
+        var porcentValidos = validos*votosTotais
+
+        alert("No total foram " + votosTotais + " votos. " + porcentBrancos + "% de votos brancos, " + porcentNulos + "% de votos nulos, e " + porcentValidos + "% de votos válidos.")
+
+        console.log(eleitores, brancos, nulos, validos, votosTotais);
+        
+    </script>
+</body>
+</html>
