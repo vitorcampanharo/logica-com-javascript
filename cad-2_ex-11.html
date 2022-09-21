@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, 
+        mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele 
+        efetuadas. Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas 
+        vendas, o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do 
+        vendedor.
+    </h1>
+    <pre>
+        <code>
+            &lt;script>
+                var salario_fixo = parseFloat(prompt("Salário fixo do vendedor:"));
+                var comissão_fixa = parseFloat(prompt("Quanto recebe por cada carro vendido:"));
+                var carros_vendidos = parseInt(prompt("Quantos carros fora vendidos:"));
+                var valor_vendas = parseFloat(prompt("Valor somado dos carros vendidos:"));
+                
+                var comissão_valor_vendas = Number(5);
+                
+                var valor_comissão_venda = (comissão_valor_vendas/100)*valor_vendas;
+                var valor_carro_vendido = carros_vendidos*comissão_fixa;
+                
+                var salário_total = salario_fixo+valor_comissão_venda+valor_carro_vendido;
+        
+                alert(`Osalário final é de ${salário_total.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}`)
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var salario_fixo = parseFloat(prompt("Salário fixo do vendedor:"));
+        var comissão_fixa = parseFloat(prompt("Quanto recebe por cada carro vendido:"));
+        var carros_vendidos = parseInt(prompt("Quantos carros fora vendidos:"));
+        var valor_vendas = parseFloat(prompt("Valor somado dos carros vendidos:"));
+        
+        var comissão_valor_vendas = Number(5);
+        
+        var valor_comissão_venda = (comissão_valor_vendas/100)*valor_vendas;
+        var valor_carro_vendido = carros_vendidos*comissão_fixa;
+        
+        var salário_total = salario_fixo+valor_comissão_venda+valor_carro_vendido;
+
+        alert(`Osalário final é de ${salário_total.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}`)
+    </script>
+</body>
+</html>

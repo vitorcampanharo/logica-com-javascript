@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O custo de um carro novo ao consumidor  é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor. </h1>
+    <pre>
+        <code>
+            &lt;script>
+                var distribuidor = Number(28);
+                var impostos = Number(45);
+                var fabrica = Number(27);//(28+45)-100=27%
+                var custo_fabrica = parseFloat(prompt("Qual o custo de fábria:"));
+                var valor_impostos = (impostos*custo_fabrica)/fabrica
+                var valor_distribuidor = (distribuidor*custo_fabrica)/fabrica
+                var valor_final = valor_impostos+valor_distribuidor+custo_fabrica;
+                //Só é possível descobrir o valor final sabendo o valor real do distribuidor e impostos, atravez de regra de 3 usando o custo de fabricação e a porcentagem de custo de fabricação (27%). 
+        
+                alert(`O percentual de distribuidor é ${distribuidor}%; o percentual de impostos é ${impostos}%; o custo de fabricação é ${custo_fabrica.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}; e o valor final repassado para o cliente é ${valor_final.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}`)
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var distribuidor = Number(28);
+        var impostos = Number(45);
+        var fabrica = Number(27);//(28+45)-100=27%
+        var custo_fabrica = parseFloat(prompt("Qual o custo de fábria:"));
+        var valor_impostos = (impostos*custo_fabrica)/fabrica
+        var valor_distribuidor = (distribuidor*custo_fabrica)/fabrica
+        var valor_final = valor_impostos+valor_distribuidor+custo_fabrica;
+        //Só é possível descobrir o valor final sabendo o valor real do distribuidor e impostos, atravez de regra de 3 usando o custo de fabricação e a porcentagem de custo de fabricação (27%). 
+
+        alert(`O percentual de distribuidor é ${distribuidor}%; o percentual de impostos é ${impostos}%; o custo de fabricação é ${custo_fabrica.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}; e o valor final repassado para o cliente é ${valor_final.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}`)
+    </script>
+</body>
+</html>
