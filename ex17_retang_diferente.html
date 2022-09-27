@@ -45,12 +45,7 @@
                 var altura = document.getElementById("ialtura").value;
                 var area_total = document.querySelector("#area_total");
                 var resultado_area =(largura*altura)+" cm2";
-                area_total.innerHTML=resultado_area
-                }
-                function limpar() {
-                var area_total = document.querySelector("#area_total");
-                area_total.innerHTML=""
-                }
+                document.querySelector("#area_total").innerHTML=resultado_area
                 &lt;/script>
         </code>
     </pre>
@@ -71,9 +66,8 @@
         function calcular() {
             var largura = document.getElementById("ilargura").value;
             var altura = document.getElementById("ialtura").value;
-            var area_total = document.querySelector("#area_total");
             var resultado_area =(largura*altura)+" cm2";
-            area_total.innerHTML=resultado_area
+            document.querySelector("#area_total").innerHTML=resultado_area
         }
     </script>
 </body>
