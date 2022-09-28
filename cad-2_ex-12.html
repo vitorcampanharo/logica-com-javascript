@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Escreva um algoritmo para ler uma temperatura em graus Fahrenheit, calcular e escrever o valor 
+         em graus Celsius (baseado na fórmula abaixo): 
+         Observação: Para testar se a sua resposta está correta saiba que 100oC = 212F 
+    </h1>
+    <pre>
+        <code>
+            &lt;script>
+                var temperatura = parseFloat(prompt("Digite a temperatura em Fahrenheit:"))
+                var Celsius = ((temperatura - 32) * 5) / 9
+                alert(`A temperatura em Celsius é ${Celsius}ºC`)
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var temperatura = parseFloat(prompt("Digite a temperatura em Fahrenheit:"))
+        var Celsius = ((temperatura - 32) * 5) / 9
+        alert(`A temperatura em Celsius é ${Celsius}ºC`)
+    </script>
+</body>
+</html>

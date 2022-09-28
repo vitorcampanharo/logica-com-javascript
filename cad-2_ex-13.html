@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Faça um algoritmo que leia três notas de um aluno, calcule e escreva a média final deste aluno. 
+        Considerar que a média é ponderada e que o peso das notas é 2, 3 e 5. Fórmula para o cálculo da média 
+        final é:
+    </h1>
+    <pre>
+        <code>
+            &lt;script>
+                var nota_1 = parseFloat(prompt("Digite sua primeira nota:"))
+                var nota_2 = parseFloat(prompt("Digite sua segunda nota:"))
+                var nota_3 = parseFloat(prompt("Digite sua terceira nota:"))
+                
+                var peso_1 = 2
+                var peso_2 = 3
+                var peso_3 = 5
+        
+                var media = ((nota_1*peso_1) + (nota_2*peso_2) + (nota_3*peso_3))/10
+        
+                alert(`A média ponderada do aluno é ${media}`)
+            &lt;/script>
+        </code>
+    </pre>
+    <script>
+        var nota_1 = parseFloat(prompt("Digite sua primeira nota:"))
+        var nota_2 = parseFloat(prompt("Digite sua segunda nota:"))
+        var nota_3 = parseFloat(prompt("Digite sua terceira nota:"))
+        
+        var peso_1 = 2
+        var peso_2 = 3
+        var peso_3 = 5
+
+        var media = ((nota_1*peso_1) + (nota_2*peso_2) + (nota_3*peso_3))/10
+
+        alert(`A média ponderada do aluno é ${media}`)
+    </script>
+</body>
+</html>
