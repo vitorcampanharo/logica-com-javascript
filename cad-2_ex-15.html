@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler um valor e escrever se é positivo ou negativo (considere o valor zero como positivo).
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="num">Digite um número:</label>
+            &lt;input type="number" name="num" id="num">
+            &lt;button onclick="verificar()">Verificar</button>
+            &lt;div id="result"></div>
+            &lt;script>
+                function verificar() {
+                    var num = document.getElementById("num").value
+                    if (num &lt; 0) {
+                        document.querySelector("#result").innerHTML="É NEGATIVO"
+                    } else{
+                        document.querySelector("#result").innerHTML="É POSITIVO"
+                    }
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="num">Digite um número:</label>
+    <input type="number" name="num" id="num">
+    <button onclick="verificar()">Verificar</button>
+    <div id="result"></div>
+    <script>
+        function verificar() {
+            var num = document.getElementById("num").value
+            if (num < 0) {
+                document.querySelector("#result").innerHTML="É NEGATIVO"
+            } else{
+                document.querySelector("#result").innerHTML="É POSITIVO"
+            }
+        }
+    </script>
+</body>
+</html>

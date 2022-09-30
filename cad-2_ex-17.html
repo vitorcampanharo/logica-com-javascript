@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever 
+        uma mensagem que diga se o aluno foi ou não aprovado (considerar que nota igual ou maior que 6 o 
+        aluno é aprovado). Escrever também a média calculada.
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="nota_1">Digite sua primeira nota:</label>
+            &lt;input type="number" name="nota_1" id="nota_1"> &lt;br> &lt;br>
+            &lt;label for="nota_2">Digite sua segunda nota:&lt;/label>
+            &lt;input type="number" name="nota_2" id="nota_2"> &lt;br> &lt;br>
+            &lt;button onclick="calcular()">Calcular</button>
+            &lt;button onclick="limpar()">Limpar</button>
+            &lt;div id="result"></div>
+            &lt;script>
+                function calcular() {
+                    var nota_1 = Number (document.getElementById("nota_1").value)
+                    var nota_2 = Number (document.getElementById("nota_2").value)
+                    var media = (nota_1+nota_2)/2
+                    if (media >= 6) {
+                        document.querySelector("#result").innerHTML=`Sua média é ${media}, parabéns, está aprovado`
+                    } else{
+                        document.querySelector("#result").innerHTML = `Sua média é ${media}, infelizmente está reprovado.`
+                    }            
+                }
+                function limpar() {
+                    document.querySelector("#result").innerHTML= null
+                    var num = document.getElementById("nota_1").value=""
+                    var num = document.getElementById("nota_2").value=""
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="nota_1">Digite sua primeira nota:</label>
+    <input type="number" name="nota_1" id="nota_1"> <br> <br>
+    <label for="nota_2">Digite sua segunda nota:</label>
+    <input type="number" name="nota_2" id="nota_2"> <br> <br>
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="result"></div>
+    <script>
+        function calcular() {
+            var nota_1 = Number (document.getElementById("nota_1").value)
+            var nota_2 = Number (document.getElementById("nota_2").value)
+            var media = (nota_1+nota_2)/2
+            if (media >= 6) {
+                document.querySelector("#result").innerHTML=`Sua média é ${media}, parabéns, está aprovado`
+            } else{
+                document.querySelector("#result").innerHTML = `Sua média é ${media}, infelizmente está reprovado.`
+            }            
+        }
+        function limpar() {
+            document.querySelector("#result").innerHTML= null
+            var num = document.getElementById("nota_1").value=""
+            var num = document.getElementById("nota_2").value=""
+        }
+    </script>
+</body>
+</html>

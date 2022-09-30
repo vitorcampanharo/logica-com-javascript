@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma mensagem que diga se ela 
+        poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu). 
+    </h1>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+    <label for="num">Seu ano de nascimento:</label>
+    <input type="number" name="num" id="num" max="2022" min="1922">
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="result"></div>
+    <script>
+        function verificar() {
+            var num = Number (document.getElementById("num").value)
+            var idade = (2022 - num)
+            if (idade < 16) {
+                document.querySelector("#result").innerHTML = `Sua idade é de ${idade} anos. Está proibido de votar`
+            } else if (idade < 18) {
+                document.querySelector("#result").innerHTML = `Sua idade é de ${idade} anos. Não precisa votar`
+            } else if (idade >= 70) {
+                document.querySelector("#result").innerHTML = `Sua idade é de ${idade} anos. Seu voto é facultativo`      
+            } else if (idade >= 18) {
+                document.querySelector("#result").innerHTML = `Sua idade é de ${idade} anos. Seu voto é obrigatório`  
+            }
+        }
+        function limpar() {
+            document.querySelector("#result").innerHTML= null
+            var num = document.getElementById("num").value=""
+        }
+    </script>
+</body>
+</html>
