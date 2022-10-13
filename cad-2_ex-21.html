@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os 
+        minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é 
+        de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte. 
+         
+    </h1>
+    <div>
+        <label for="n1">Hora que começou:</label>
+        <input type="number" name="n1" id="n1" min="0" max="23">
+    </div>
+    <div>
+        <label for="n2">Hora que terminou:</label>
+        <input type="number" name="n2" id="n2" min="0" max="23">
+    </div>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="result"></div>
+    <script>
+        function verificar() {
+            var num_1 = Number (document.getElementById("n1").value)
+            var num_2 = Number (document.getElementById("n2").value)
+            var hora = num_2 - num_1;
+            var hora_dia_seguinte = (num_1-0) + (num_2 - 0);
+            if (num_1 > 23 || num_2 > 23) {
+                document.querySelector("#result").innerHTML = "Impossível, esta hora não existe"
+            } else if (num_1 < 0 || num_2 < 0) {
+                document.querySelector("#result").innerHTML = "Impossível, esta hora não existe"
+            }
+            if (num_1 >= 0 && num_1 <= 23 && num_2 >= 0 && num_2 <= 23) {
+                if (num_1 > 0 || num_2 <= 23) {
+                document.querySelector("#result").innerHTML = `O jogo teve ${hora} horas de duração`
+                }
+                if (num_1 === num_2) {
+                    document.querySelector("#result").innerHTML = "O jogo teve 24h de duração"
+                }
+                if (hora > 24) {
+                document.querySelector("#result").innerHTML = "A duração total permitida é de 24h"
+                }
+            }
+        }
+        function limpar() {
+            document.querySelector("#result").innerHTML= null
+            var num = document.getElementById("n1").value=""
+            var num = document.getElementById("n2").value=""
+        }
+    </script>
+</body>
+</html>

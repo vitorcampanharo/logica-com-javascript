@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais 
+        de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%. 
+        Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva 
+        o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas 
+        (considere que o mês possua 4 semanas exatas). 
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="hora">Horas trabalhadas no mês</label>
+            &lt;input type="number" name="hora" id="hora">
+            &lt;button onclick="verificar()">Verificar salário</button>
+            &lt;button onclick="limpar()">Limpar</button>
+            &lt;div id="tela"></div>
+            &lt;script>
+                function verificar() {
+                    var hora_mês = 160
+                    var salario_hora = 10
+                    var salario_hora_extra = 0.5*salario_hora
+                    var hora_total = Number(document.getElementById("hora").value);
+                    if (hora_total &lt;= hora_mês) {
+                        document.querySelector("#tela").innerHTML = `O funcionário trabalhou ${hora_total} horas esse mês, irá receber R$${salario_hora*hora_total} reais`
+                    } else if(hora_total > hora_mês){
+                        document.querySelector("#tela").innerHTML = `O funcionário trabalhou ${hora_total} horas esse mês, ${hora_total-hora_mês} horas extras. Irá receber R$${salario_hora*hora_mês} reais, mais R$${(hora_total-hora_mês)*(salario_hora+salario_hora_extra)} reais.`
+                    }
+                    
+                }
+                function limpar() {
+                    document.querySelector("#tela").innerHTML= null
+                    var num = document.getElementById("hora").value=""
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="hora">Horas trabalhadas no mês</label>
+    <input type="number" name="hora" id="hora">
+    <button onclick="verificar()">Verificar salário</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>
+        function verificar() {
+            var hora_mês = 160
+            var salario_hora = 10
+            var salario_hora_extra = 0.5*salario_hora
+            var hora_total = Number(document.getElementById("hora").value);
+            if (hora_total <= hora_mês) {
+                document.querySelector("#tela").innerHTML = `O funcionário trabalhou ${hora_total} horas esse mês, irá receber R$${salario_hora*hora_total} reais`
+            } else if(hora_total > hora_mês){
+                document.querySelector("#tela").innerHTML = `O funcionário trabalhou ${hora_total} horas esse mês, ${hora_total-hora_mês} horas extras. Irá receber R$${salario_hora*hora_mês} reais, mais R$${(hora_total-hora_mês)*(salario_hora+salario_hora_extra)} reais.`
+            }
+            
+        }
+        function limpar() {
+            document.querySelector("#tela").innerHTML= null
+            var num = document.getElementById("hora").value=""
+        }
+    </script>
+</body>
+</html>

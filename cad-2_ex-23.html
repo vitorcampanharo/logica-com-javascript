@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>
+        Enunciado: Tendo como dados de entrada o nome, a altura e o sexo (M ou F) de uma pessoa, calcule 
+        e mostre seu peso ideal, utilizando as seguintes fórmulas: 
+        - para sexo masculino: peso ideal = (72.7 * altura) - 58 
+        - para sexo feminino: peso ideal = (62.1 * altura) - 44.7
+    </h1>
+    <pre>
+        <code>
+            &lt;div>
+                &lt;label for="nom">Qual seu nome:&lt;/label>
+                &lt;input type="text" name="nom" id="nome">
+            &lt;/div>
+            &lt;div>
+                &lt;label for="alt">Qual sua altura</label>
+                &lt;input type="number" name="alt" id="altura" step="0.01">
+            &lt;/div>
+            &lt;div>
+                &lt;label for="sex">Qual seu sexo:&lt;/label>
+                &lt;input type="radio" name="sex" id="M"> Masculino
+                &lt;input type="radio" name="sex" id="F"> Feminino
+            &lt;/div>
+            &lt;div>
+                &lt;button onclick="calc()"> Calcular</button>
+                &lt;button onclick="limpar()">Limpar</button>
+            &lt;/div>
+            &lt;div id="tela"></div>
+            &lt;script>
+                function calc() {
+                    var nome = document.getElementById("nome").value
+                    var altura = Number(document.getElementById("altura").value)
+                    var peso_homem = (72.7*altura)-58
+                    var peso_mulher = (62.1*altura)-44.7
+                    var mas = document.getElementsByName("sex")[0]
+                    var fem = document.getElementsByName("sex")[1]
+        
+                    if (mas.checked) {
+                    document.querySelector("#tela").innerHTML = `Olá ${nome}, você é um homem de ${altura} metros, seu peso ideal é de ${peso_homem} kg`
+                    } else if(fem.checked){
+                    document.querySelector("#tela").innerHTML = `Olá ${nome}, você é uma mulher de ${altura} metros, seu peso ideal é de ${peso_mulher} kg`
+                    }
+                }
+                function limpar() {
+                    document.querySelector("#tela").innerHTML= null
+                    var num = document.getElementById("nome").value=""
+                    var num = document.getElementById("altura").value=""
+                    var num = document.getElementById("M").checked=null
+                    var num = document.getElementById("F").checked=null
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <div>
+        <label for="nom">Qual seu nome:</label>
+        <input type="text" name="nom" id="nome">
+    </div>
+    <div>
+        <label for="alt">Qual sua altura</label>
+        <input type="number" name="alt" id="altura" step="0.01">
+    </div>
+    <div>
+        <label for="sex">Qual seu sexo:</label>
+        <input type="radio" name="sex" id="M"> Masculino
+        <input type="radio" name="sex" id="F"> Feminino
+    </div>
+    <div>
+        <button onclick="calc()"> Calcular</button>
+        <button onclick="limpar()">Limpar</button>
+    </div>
+    <div id="tela"></div>
+    <script>
+        function calc() {
+            var nome = document.getElementById("nome").value
+            var altura = Number(document.getElementById("altura").value)
+            var peso_homem = (72.7*altura)-58
+            var peso_mulher = (62.1*altura)-44.7
+            var mas = document.getElementsByName("sex")[0]
+            var fem = document.getElementsByName("sex")[1] 
+
+            if (mas.checked) {
+            document.querySelector("#tela").innerHTML = `Olá ${nome}, você é um homem de ${altura} metros, seu peso ideal é de ${peso_homem} kg`
+            } else if(fem.checked){
+            document.querySelector("#tela").innerHTML = `Olá ${nome}, você é uma mulher de ${altura} metros, seu peso ideal é de ${peso_mulher} kg`
+            }
+        }
+        function limpar() {
+            document.querySelector("#tela").innerHTML= null
+            var num = document.getElementById("nome").value=""
+            var num = document.getElementById("altura").value=""
+            var num = document.getElementById("M").checked=null
+            var num = document.getElementById("F").checked=null
+        }
+    </script>
+</body>
+</html>
