@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler o salário fixo e o valor das vendas efetuadas pelo vendedor de uma empresa. Sabendo-se que 
+        ele recebe uma comissão de 3% sobre o total das vendas até R$ 1.500,00 mais 5% sobre o que 
+        ultrapassar este valor, calcular e escrever o seu salário total.
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="vendas">Valor total das vendas:&lt;/label>
+            &lt;input type="number" name="vendas" id="vendas">
+            &lt;button onclick="calcular()">Calcular&lt;/button>
+            &lt;button onclick="limpar()">Limpar&lt;/button>
+            &lt;div id="tela">&lt;/div>
+            &lt;script>
+                function calcular() {
+                    var vendas = document.getElementById("vendas")
+                    var tela = document.querySelector("#tela")
+                    var sal_fixo = 1200
+                    if (vendas.value.length == 0) {
+                        alert("Digite um valor para começar o cálculo")
+                    } else {
+                        vendas_real = Number(vendas.value)                  
+                        if (vendas_real &lt;= 1500) {
+                            tela.innerHTML = `Salário fixo: ${sal_fixo}&lt;br> 
+                            vendas: ${vendas_real}&lt;br>
+                            comissão total: ${0.03*vendas_real}&lt;br>
+                            salário total: ${sal_fixo + 0.03*vendas_real} `
+                        } else if(vendas_real > 1500){
+                            tela.innerHTML = `Salário fixo: ${sal_fixo}&lt;br> 
+                            vendas: ${vendas_real}&lt;br>
+                            comissão total: ${(0.05*(vendas_real-1500)) + (0.03*1500)}&lt;br>
+                            salário total: ${(0.05*(vendas_real-1500)) + (0.03*1500) + sal_fixo}`
+                        }
+                    }
+                }
+                function limpar() {
+                    vendas.value = null
+                    tela.innerHTML = null
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="vendas">Valor total das vendas:</label>
+    <input type="number" name="vendas" id="vendas">
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>
+        function calcular() {
+            var vendas = document.getElementById("vendas")
+            var tela = document.querySelector("#tela")
+            var sal_fixo = 1200
+            if (vendas.value.length == 0) {
+                alert("Digite um valor para começar o cálculo")
+            } else {
+                vendas_real = Number(vendas.value)                  
+                if (vendas_real <= 1500) {
+                    tela.innerHTML = `Salário fixo: ${sal_fixo}<br> 
+                    vendas: ${vendas_real}<br>
+                    comissão total: ${0.03*vendas_real}<br>
+                    salário total: ${sal_fixo + 0.03*vendas_real} `
+                } else if(vendas_real > 1500){
+                    tela.innerHTML = `Salário fixo: ${sal_fixo}<br> 
+                    vendas: ${vendas_real}<br>
+                    comissão total: ${(0.05*(vendas_real-1500)) + (0.03*1500)}<br>
+                    salário total: ${(0.05*(vendas_real-1500)) + (0.03*1500) + sal_fixo}`
+                }
+            }
+        }
+        function limpar() {
+            vendas.value = null
+            tela.innerHTML = null
+        }
+    </script>
+</body>
+</html>
