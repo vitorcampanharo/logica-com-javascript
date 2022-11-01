@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima em estoque e 
+        quantidade mínima em estoque de um produto. Calcular e escrever a quantidade média ((quantidade 
+        média = quantidade máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual 
+        a quantidade média escrever a mensagem 'Não efetuar compra', senão escrever a mensagem 'Efetuar 
+        compra'. 
+    </h1>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+    <main>
+        <section>
+            <label for="estoque">Quantidade atual no estoque:</label> <br>
+            <input type="text" name="estoque" id="estoque">
+        </section> <br>
+        <section>
+            <label for="max">Quantidade máxima:</label> <br>
+            <input type="number" name="max" id="max">
+        </section> <br>
+        <section>
+            <label for="min">Quantidade mínima:</label> <br>
+            <input type="number" name="min" id="min">
+        </section> <br>
+        <section>
+            <button onclick="calcular()">Calcular média dos produtos</button>
+            <button onclick="resetar()">Resetar</button>
+            <p>Média: <span id="tela"></span></p>
+        </section>
+    </main>
+    <script>
+        function calcular() {
+            var estoque = Number (document.getElementById("estoque").value)
+            var max = Number (document.getElementById("max").value)
+            var min = Number (document.getElementById("min").value)
+            var tela = document.querySelector("#tela")
+            var média = (max+min)/2
+            var msg = ""
+            if (estoque >= média) {
+                msg+="Não efetuar a compra"
+            } else {
+                msg+="Efetuar compra"
+            }
+            tela.innerHTML = `${média} produtos em média. ${msg}`
+        }
+        function resetar() {
+            estoque.value = null
+            max.value = null
+            min.value = null
+            tela.innerHTML = null
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e 
+    escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior 
+    ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'. </h1>
+    <pre>
+        <code>
+            &lt;main>
+                &lt;section>
+                    &lt;label for="conta">Número da conta:&lt;/label> &lt;br>
+                    &lt;input type="text" name="conta" id="conta">
+                &lt;/section> &lt;br>
+                &lt;section>
+                    &lt;label for="saldo">Seu saldo:&lt;/label> &lt;br>
+                    &lt;input type="number" name="saldo" id="saldo">
+                &lt;/section> &lt;br>
+                &lt;section>
+                    &lt;label for="débito">Seu débito:&lt;/label> &lt;br>
+                    &lt;input type="number" name="débito" id="débito">
+                &lt;/section> &lt;br>
+                &lt;section>
+                    &lt;label for="crédito">Seu crédito:</label> &lt;br>
+                    &lt;input type="number" name="crédito" id="crédito">
+                </section> &lt;br>
+                <section>
+                    &lt;button onclick="calcular()">Calcuar saldo atual&lt;/button>
+                    &lt;button onclick="resetar()">Resetar</button>
+                    <p>Seu saldo atual: &lt;span id="tela">&lt;/span>&lt;/p>
+                </section>
+            &lt;/main>
+            &lt;script>
+                function calcular() {
+                    var conta = Number (document.getElementById("conta").value)
+                    var saldo = Number (document.getElementById("saldo").value)
+                    var débito = Number (document.getElementById("débito").value)
+                    var crédito = Number (document.getElementById("crédito").value)
+                    var tela = document.querySelector("#tela")
+                    var saldo_atual = saldo-débito+crédito
+                    var msg = ""
+                    if (saldo_atual >=0) {
+                        msg+="Saldo positivo"
+                    } else {
+                        msg+="Saldo negativo"
+                    }
+                    tela.innerHTML = `${saldo_atual}. ${msg}`
+                }
+                function resetar() {
+                    conta.value = null
+                    saldo.value = null
+                    débito.value = null
+                    crédito.value = null
+                    tela.innerHTML = null
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <main>
+        <section>
+            <label for="conta">Número da conta:</label> <br>
+            <input type="text" name="conta" id="conta">
+        </section> <br>
+        <section>
+            <label for="saldo">Seu saldo:</label> <br>
+            <input type="number" name="saldo" id="saldo">
+        </section> <br>
+        <section>
+            <label for="débito">Seu débito:</label> <br>
+            <input type="number" name="débito" id="débito">
+        </section> <br>
+        <section>
+            <label for="crédito">Seu crédito:</label> <br>
+            <input type="number" name="crédito" id="crédito">
+        </section> <br>
+        <section>
+            <button onclick="calcular()">Calcuar saldo atual</button>
+            <button onclick="resetar()">Resetar</button>
+            <p>Seu saldo atual: <span id="tela"></span></p>
+        </section>
+    </main>
+    <script>
+        function calcular() {
+            var conta = Number (document.getElementById("conta").value)
+            var saldo = Number (document.getElementById("saldo").value)
+            var débito = Number (document.getElementById("débito").value)
+            var crédito = Number (document.getElementById("crédito").value)
+            var tela = document.querySelector("#tela")
+            var saldo_atual = saldo-débito+crédito
+            var msg = ""
+            if (saldo_atual >=0) {
+                msg+="Saldo positivo"
+            } else {
+                msg+="Saldo negativo"
+            }
+            tela.innerHTML = `${saldo_atual}. ${msg}`
+        }
+        function resetar() {
+            conta.value = null
+            saldo.value = null
+            débito.value = null
+            crédito.value = null
+            tela.innerHTML = null
+        }
+    </script>
+</body>
+</html>
