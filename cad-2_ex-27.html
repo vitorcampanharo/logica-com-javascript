@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ler um valor e escrever se é positivo, negativo ou zero.
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="num">Escreva um número&lt;/label>
+            &lt;input type="number" name="num" id="num">
+            &lt;button onclick="mostrar()">Mostrar&lt;/button>
+            &lt;button onclick="limpar()">Limpar&lt;/button>
+            &lt;div id="tela">&lt;/div>
+            &lt;script>
+                function mostrar() {
+                    var num = Number(document.getElementById("num").value)
+                    var tela = document.querySelector("#tela")
+                    if (num > 0) {
+                        tela.innerHTML = `Você digitou ${num}, é positivo`
+                    } else if (num &lt; 0) {
+                        tela.innerHTML = `Você digitou ${num}, é negativo`
+                    } else{
+                        tela.innerHTML = `Você digitou ${num}`
+                    }
+                }
+                function limpar() {
+                    num.value = null
+                    tela.innerHTML = null
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="num">Escreva um número</label>
+    <input type="number" name="num" id="num">
+    <button onclick="mostrar()">Mostrar</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>
+        function mostrar() {
+            var num = Number(document.getElementById("num").value)
+            var tela = document.querySelector("#tela")
+            if (num > 0) {
+                tela.innerHTML = `Você digitou ${num}, é positivo`
+            } else if (num < 0) {
+                tela.innerHTML = `Você digitou ${num}, é negativo`
+            } else{
+                tela.innerHTML = `Você digitou ${num}`
+            }
+        }
+        function limpar() {
+            num.value = null
+            tela.innerHTML = null
+        }
+    </script>
+</body>
+</html>
