@@ -12,6 +12,23 @@
     </h1>
     <label for="num">Escreva 3 números</label>
     <input type="number" name="num" id="num">
+    <button onclick="adicionar()">Adicionar</button>
     <button onclick="calcular()">Calcular</button>
+    <div id="tela"></div>
+    <script>
+        
+        var tela = document.querySelector("#tela")
+        
+        function adicionar() {
+            var num = Number (document.getElementById("num").value)
+            var numeros = []
+            if (numeros.indexOf(num.value) == -1) {
+                numeros.push(num.value)
+            } else {
+                alert("não pode ter números repetidos")
+            }
+            console.log(numeros)
+        }
+    </script>
 </body>
 </html>
