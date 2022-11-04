@@ -18,17 +18,18 @@
     <script>
         
         var tela = document.querySelector("#tela")
-        
-        function adicionar() {
-            var num = Number (document.getElementById("num").value)
-            var numeros = []
-            if (numeros.indexOf(num.value) == -1) {
+        var num = document.getElementById("num")
+        var numeros = []
+        function adicionar() {           
+            if (numeros.indexOf(num) === -1) {
                 numeros.push(num.value)
-            } else {
-                alert("não pode ter números repetidos")
-            }
+            } else if (numeros.indexOf(num) !== -1) {
+                alert("Número repetido")
+            } 
             console.log(numeros)
         }
+        
+        
     </script>
 </body>
 </html>
