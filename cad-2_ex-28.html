@@ -18,17 +18,23 @@
     <script>
         
         var tela = document.querySelector("#tela")
-        var num = document.getElementById("num").value
+        var num = document.getElementById("num")
         var numeros = []
         function adicionar() {           
-            numeros.push(num)
-            var ordem = numeros.sort()
+            numeros.push(Number(num.value))
+            numeros.sort()
+            var ordem = numeros.sort(function(a,b) {
+                if(a>b) return 1
+                if(a<b) return -1
+                return 0
+            })
             var maior = Math.max.apply(null,numeros)
             console.log(numeros.length)
             console.log(maior)
             console.log(numeros)
-            tela.innerHTML = `O maior é ${maior}. <br> Ordem crescente é ${numeros.sort()}`
-            
+            tela.innerHTML = `O maior é ${maior}. <br> Ordem crescente é ${ordem}`
+            num.value = null
+            num.focus()
         }
     </script>
 </body>
