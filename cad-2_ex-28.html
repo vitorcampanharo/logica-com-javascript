@@ -22,7 +22,16 @@
         var numeros = []
         function adicionar() {           
             numeros.push(Number(num.value))
-            numeros.sort()
+            if (numeros.indexOf(-1) == true) {
+                num.value = null
+                num.focus()
+            } else {
+                alert("Não pode números repetidos")
+            }
+            
+        }
+        function calcular() {
+            
             var ordem = numeros.sort(function(a,b) {
                 if(a>b) return 1
                 if(a<b) return -1
@@ -32,9 +41,7 @@
             console.log(numeros.length)
             console.log(maior)
             console.log(numeros)
-            tela.innerHTML = `O maior é ${maior}. <br> Ordem crescente é ${ordem}`
-            num.value = null
-            num.focus()
+            tela.innerHTML = `O maior é ${maior}. <br> Ordem crescente é ${ordem}. <br> Números digitados foram ${numeros}`
         }
     </script>
 </body>
