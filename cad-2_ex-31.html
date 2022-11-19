@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        31) Ler 3 valores (A, B e C) representando as medidas dos lados de um triângulo e escrever se formam 
+        ou não um triângulo. OBS: para formar um triângulo, o valor de cada lado deve ser menor que a soma 
+        dos outros 2 lados. 
+    </h1>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+    <section>
+        <label for="num1">Escreva um número:</label>
+        <input type="number" name="num1" id="num1">
+    </section> <br>
+    <section>
+        <label for="num2">Escreva um número:</label>
+        <input type="number" name="num2" id="num2">
+    </section> <br>
+    <section>
+        <label for="num3">Escreva um número:</label>
+        <input type="number" name="num3" id="num3">
+    </section> <br>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>  
+        function verificar() {
+            var num1 = Number (document.getElementById("num1").value)
+            var num2 = Number (document.getElementById("num2").value)
+            var num3 = Number (document.getElementById("num3").value)
+            var tela = document.querySelector("#tela")
+            if (num1 < num2+num3 && num2 < num1+num3 && num3 < num2+num1) {
+                tela.innerHTML = `É um triangulo`
+            } else{
+                tela.innerHTML = "Não é um triangulo"
+            }
+        }
+        function limpar() {
+            
+        }
+    </script>
+</body>
+</html>

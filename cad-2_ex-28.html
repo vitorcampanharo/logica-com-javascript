@@ -22,16 +22,11 @@
         var numeros = []
         function adicionar() {           
             numeros.push(Number(num.value))
-            if (numeros.indexOf(-1) == true) {
-                num.value = null
-                num.focus()
-            } else {
-                alert("Não pode números repetidos")
-            }
-            
+            num.value = null
+            num.focus()
+        
         }
-        function calcular() {
-            
+        function calcular() {           
             var ordem = numeros.sort(function(a,b) {
                 if(a>b) return 1
                 if(a<b) return -1
