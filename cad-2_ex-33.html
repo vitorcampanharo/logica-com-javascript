@@ -7,81 +7,72 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        31) Ler 3 valores (A, B e C) representando as medidas dos lados de um triângulo e escrever se formam 
-        ou não um triângulo. OBS: para formar um triângulo, o valor de cada lado deve ser menor que a soma 
-        dos outros 2 lados. 
-    </h1>
+    <h1>33) Ler dois valores e imprimir uma das três mensagens a seguir: 
+    Números iguais, caso os números sejam iguais 
+    Primeiro é maior, caso o primeiro seja maior que o segundo; 
+    Segundo maior, caso o segundo seja maior que o primeiro. </h1>
     <pre>
         <code>
             &lt;section>
-            &lt;label for="num1">Escreva um número:&lt;/label>
+                &lt;label for="num1">Primeiro número&lt;/label>
                 &lt;input type="number" name="num1" id="num1">
             &lt;/section> &lt;br>
             &lt;section>
-                &lt;label for="num2">Escreva um número:&lt;/label>
+                &lt;label for="num2">Segundo número&lt;/label>
                 &lt;input type="number" name="num2" id="num2">
-            &lt;/section> &lt;br>
-            &lt;section>
-                &lt;label for="num3">Escreva um número:&lt;/label>
-                &lt;input type="number" name="num3" id="num3">
             &lt;/section> &lt;br>
             &lt;button onclick="verificar()">Verificar&lt;/button>
             &lt;button onclick="limpar()">Limpar</button>
             &lt;div id="tela">&lt;/div>
-            &lt;script>  
+            &lt;script>
                 function verificar() {
                     var num1 = Number (document.getElementById("num1").value)
                     var num2 = Number (document.getElementById("num2").value)
-                    var num3 = Number (document.getElementById("num3").value)
                     var tela = document.querySelector("#tela")
-                    if (num1 &lt; num2+num3 && num2 &lt; num1+num3 && num3 &lt; num2+num1) {
-                        tela.innerHTML = `É um triangulo`
-                    } else{
-                        tela.innerHTML = "Não é um triangulo"
+                    if (num1 > num2) {
+                        tela.innerHTML = `O primeiro número ${num1} é maior que o segundo número ${num2}`
+                    } else if(num1 &lt; num2){
+                        tela.innerHTML = `O primeiro número ${num1} é menor que o segundo número ${num2}`
+                    } else if(num1 === num2){
+                        tela.innerHTML = `Números iguais, ${num1} e ${num2}`
                     }
                 }
                 function limpar() {
                     tela.innerHTML = null
                     num1.value = null
                     num2.value = null
-                    num3.value = null
                 }
             &lt;/script>
         </code>
     </pre>
     <section>
-        <label for="num1">Escreva um número:</label>
+        <label for="num1">Primeiro número</label>
         <input type="number" name="num1" id="num1">
     </section> <br>
     <section>
-        <label for="num2">Escreva um número:</label>
+        <label for="num2">Segundo número</label>
         <input type="number" name="num2" id="num2">
-    </section> <br>
-    <section>
-        <label for="num3">Escreva um número:</label>
-        <input type="number" name="num3" id="num3">
     </section> <br>
     <button onclick="verificar()">Verificar</button>
     <button onclick="limpar()">Limpar</button>
     <div id="tela"></div>
-    <script>  
+    <script>
         function verificar() {
             var num1 = Number (document.getElementById("num1").value)
             var num2 = Number (document.getElementById("num2").value)
-            var num3 = Number (document.getElementById("num3").value)
             var tela = document.querySelector("#tela")
-            if (num1 < num2+num3 && num2 < num1+num3 && num3 < num2+num1) {
-                tela.innerHTML = `É um triangulo`
-            } else{
-                tela.innerHTML = "Não é um triangulo"
+            if (num1 > num2) {
+                tela.innerHTML = `O primeiro número ${num1} é maior que o segundo número ${num2}`
+            } else if(num1 < num2){
+                tela.innerHTML = `O primeiro número ${num1} é menor que o segundo número ${num2}`
+            } else if(num1 === num2){
+                tela.innerHTML = `Números iguais, ${num1} e ${num2}`
             }
         }
         function limpar() {
             tela.innerHTML = null
             num1.value = null
             num2.value = null
-            num3.value = null
         }
     </script>
 </body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>32) Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome 
+    do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.</h1>
+    <pre>
+        <code>
+            &lt;section>
+                &lt;h3>Time 1&lt;/h3>
+                &lt;label for="time1">Nome do time:&lt;/label>
+                &lt;input type="text" name="time1" id="time1"> <br>
+                &lt;label for="gols1">Número de gols:&lt;/label>
+                &lt;input type="number" name="gols1" id="gols1">
+            &lt;/section> &lt;br>
+            &lt;section>
+                &lt;h3>Time 2&lt;/h3>
+                &lt;label for="time2">Nome do time:&lt;/label>
+                &lt;input type="text" name="time2" id="time2"> &lt;br>
+                &lt;label for="gols2">Número de gols:&lt;/label>
+                &lt;input type="number" name="gols2" id="gols2">
+            &lt;/section> &lt;br>
+            &lt;button onclick="verificar()">Verificar&lt;/button>
+            &lt;button onclick="limpar()">Limpar&lt;/button> &lt;br>
+            &lt;div id="tela">&lt;/div>
+            &lt;script>    
+                function verificar() {
+                    var time1 = document.getElementById("time1").value
+                    var time2 = document.getElementById("time2").value
+                    var gols1 = Number (document.getElementById("gols1").value)
+                    var gols2 = Number (document.getElementById("gols2").value)
+                    var tela = document.querySelector("#tela")
+                    if (gols1 > gols2) {
+                        tela.innerHTML = `O time ${time1} ganhou, com placar ${gols1} a ${gols2}`
+                    } else if(gols2 > gols1){
+                        tela.innerHTML = `O time ${time2} ganhou, com placar ${gols2} a ${gols1}`
+                    } else {
+                        tela.innerHTML = "Houve empate"
+                    }
+                }
+                function limpar() {
+                    tela.innerHTML = null
+                    time1.value = null
+                    time2.value = null
+                    gols1.value = null
+                    gols2.value = null
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <section>
+        <h3>Time 1</h3>
+        <label for="time1">Nome do time:</label>
+        <input type="text" name="time1" id="time1"> <br>
+        <label for="gols1">Número de gols:</label>
+        <input type="number" name="gols1" id="gols1">
+    </section> <br>
+    <section>
+        <h3>Time 2</h3>
+        <label for="time2">Nome do time:</label>
+        <input type="text" name="time2" id="time2"> <br>
+        <label for="gols2">Número de gols:</label>
+        <input type="number" name="gols2" id="gols2">
+    </section> <br>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button> <br>
+    <div id="tela"></div>
+    <script>    
+        function verificar() {
+            var time1 = document.getElementById("time1").value
+            var time2 = document.getElementById("time2").value
+            var gols1 = Number (document.getElementById("gols1").value)
+            var gols2 = Number (document.getElementById("gols2").value)
+            var tela = document.querySelector("#tela")
+            if (gols1 > gols2) {
+                tela.innerHTML = `O time ${time1} ganhou, com placar ${gols1} a ${gols2}`
+            } else if(gols2 > gols1){
+                tela.innerHTML = `O time ${time2} ganhou, com placar ${gols2} a ${gols1}`
+            } else {
+                tela.innerHTML = "Houve empate"
+            }
+        }
+        function limpar() {
+            tela.innerHTML = null
+            time1.value = null
+            time2.value = null
+            gols1.value = null
+            gols2.value = null
+        }
+    </script>
+</body>
+</html>
