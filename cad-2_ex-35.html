@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Um posto está vendendo combustíveis com a seguinte tabela de descontos: 
+        até 20 litros, desconto de 3% por litro Álcool 
+        acima de 20 litros, desconto de 5% por litro 
+        até 20 litros, desconto de 4% por litro. Gasolina 
+        acima de 20 litros, desconto de 6% por litro 
+        Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da 
+        seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se 
+        que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90. 
+    </h1>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+    <p>Gasolina: R$3,30 <br>
+    Álcool: R$2,90</p>
+    <hr>
+    <section>
+        <label for="combustivel">Qual combustível usado:</label>
+        <input type="radio" name="comb" id="A">Álcool
+        <input type="radio" name="comb" id="G">Gasolina
+    </section>
+    <section>
+        <label for="quantidade">Quantos litros colocou:</label>
+        <input type="number" name="quanti" id="quantidade">
+    </section>
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>
+        function calcular() {
+            var alc = document.getElementsByName("comb")[0]
+            var gas = document.getElementsByName("comb")[1]
+            var quanti = Number (document.getElementById("quantidade").value)
+            var alcoolMenorQue20 = (2.90-(2.9*0.03))*quanti
+            var alcoolMaiorQue20 = (2.90-(2.9*0.05))*quanti
+            var gasolinaMenorQue20 = (3.30-(3.30*0.04))*quanti
+            var gasolinaMaiorQue20 = (3.30-(3.30*0.06))*quanti
+            var tela = document.querySelector("#tela")
+            if (alc.checked) {
+                if (quanti <= 20) {
+                    tela.innerHTML = `Você comprou ${quanti} litros de álcool. Irá pagar ${alcoolMenorQue20.toFixed(2)}`
+                } else{
+                    tela.innerHTML = `Você comprou ${quanti} litros de álcool. Irá pagar ${alcoolMaiorQue20.toFixed(2)}`
+                }
+            } else if(gas.checked){
+                if (quanti <= 20) {
+                    tela.innerHTML = `Você comprou ${quanti} litros de gasolina. Irá pagar ${gasolinaMenorQue20.toFixed(2)}`
+                } else {
+                    tela.innerHTML = `Você comprou ${quanti} litros de gasolina. Irá pagar ${gasolinaMaiorQue20.toFixed(2)}`
+                }
+            }
+        }
+        function limpar() {
+            tela.innerHTML = null
+            quanti.value = null
+        }       
+    </script>
+</body>
+</html>
