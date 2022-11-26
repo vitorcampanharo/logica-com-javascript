@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        36) Escreva um algoritmo que leia as idades de 2 homens e de 2 mulheres (considere que as idades 
+        dos homens serão sempre diferentes entre si, bem como as das mulheres). Calcule e escreva a soma 
+        das idades do homem mais velho com a mulher mais nova, e o produto das idades do homem mais 
+        novo com a mulher mais velha. 
+    </h1>
+    <pre>
+        <code>
+            &lt;section>
+                &lt;h2>Homens&lt;/h2>
+                &lt;label for="homem1">Primeiro homem&lt;/label>
+                &lt;input type="number" name="homem1" id="homem1">
+                &lt;br>
+                &lt;label for="homem2">Segundo homem&lt;/label>
+                &lt;input type="number" name="homem2" id="homem2">
+            &lt;/section>
+            &lt;section>
+                &lt;h2>mulheres&lt;/h2>
+                &lt;label for="mulher1">Primeira muher</label>
+                &lt;input type="number" name="mulher1" id="mulher1">
+                &lt;br>
+                &lt;label for="mulher2">Segunda mulher&lt;/label>
+                &lt;input type="number" name="mulher2" id="mulher2">
+            &lt;/section>
+            &lt;br>
+            &lt;button onclick="verificar()">Verificar&lt;/button>
+            &lt;button onclick="limpar()">Limpar&lt;/button>
+            &lt;div id="tela">&lt;/div>
+            &lt;script>
+                function verificar() {
+                    var idadePrimeiroHomem = Number (document.getElementById("homem1").value)
+                    var idadeSegundoHomem = Number (document.getElementById("homem2").value)
+                    var idadePrimeiraMulher = Number (document.getElementById("mulher1").value)
+                    var idadeSegundaMulher = Number (document.getElementById("mulher2").value)
+                    var tela = document.querySelector("#tela")
+                    if (idadePrimeiroHomem != idadeSegundoHomem && idadePrimeiraMulher != idadeSegundaMulher) {
+                        if (idadePrimeiroHomem > idadeSegundoHomem && idadePrimeiraMulher > idadeSegundaMulher) {
+                            tela.innerHTML = `A soma das idades entre o homem e mulher mais velhos é ${idadePrimeiroHomem+idadePrimeiraMulher}. &lt;br> O produto entre as idades do homem e mulhere mais novos é ${idadeSegundoHomem*idadeSegundaMulher}`
+                        }
+                    } else{
+                        tela.innerHTML = `As idade devem ser diferentes entre cada gênero`
+                    }
+                    console.log(idadePrimeiroHomem)
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <section>
+        <h2>Homens</h2>
+        <label for="homem1">Primeiro homem</label>
+        <input type="number" name="homem1" id="homem1">
+        <br>
+        <label for="homem2">Segundo homem</label>
+        <input type="number" name="homem2" id="homem2">
+    </section>
+    <section>
+        <h2>mulheres</h2>
+        <label for="mulher1">Primeira muher</label>
+        <input type="number" name="mulher1" id="mulher1">
+        <br>
+        <label for="mulher2">Segunda mulher</label>
+        <input type="number" name="mulher2" id="mulher2">
+    </section>
+    <br>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="tela"></div>
+    <script>
+        function verificar() {
+            var idadePrimeiroHomem = Number (document.getElementById("homem1").value)
+            var idadeSegundoHomem = Number (document.getElementById("homem2").value)
+            var idadePrimeiraMulher = Number (document.getElementById("mulher1").value)
+            var idadeSegundaMulher = Number (document.getElementById("mulher2").value)
+            var tela = document.querySelector("#tela")
+            if (idadePrimeiroHomem != idadeSegundoHomem && idadePrimeiraMulher != idadeSegundaMulher) {
+                if (idadePrimeiroHomem > idadeSegundoHomem && idadePrimeiraMulher > idadeSegundaMulher) {
+                    tela.innerHTML = `A soma das idades entre o homem e mulher mais velhos é ${idadePrimeiroHomem+idadePrimeiraMulher}. <br> O produto entre as idades do homem e mulhere mais novos é ${idadeSegundoHomem*idadeSegundaMulher}`
+                }
+            } else{
+                tela.innerHTML = `As idade devem ser diferentes entre cada gênero`
+            }
+            console.log(idadePrimeiroHomem)
+        }
+    </script>
+</body>
+</html>
