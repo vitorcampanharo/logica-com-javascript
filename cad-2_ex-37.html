@@ -7,6 +7,54 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>37) Uma fruteira está vendendo frutas com a seguinte tabela de preços: 
+        <span><img src="../Sem título.png" alt=""></span> <br>
+        Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá 
+        ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de 
+        morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente. </h1>
+        <pre>
+            <code>
+
+            </code>
+        </pre>
+        <label for="maçã">Maçã:</label>
+        <input type="radio" name="maçã" id="maçãS"> Sim
+        <input type="radio" name="maçã" id="maçãN" checked> Não
+        <br>
+        <label for="kgMaçã">Quantidade em kg:</label>
+        <input type="number" name="kg" id="kgMaçã" disabled>
+        <hr>
+        <label for="morango">Morango:</label>
+        <input type="radio" name="morango" id="morangoS"> Sim
+        <input type="radio" name="morango" id="morangoN" checked> Não
+        <br>
+        <label for="kgMorango">Quantidade em kg:</label>
+        <input type="number" name="kg" id="kgMorango" disabled>
+        <script>
+            var maçãSim = document.getElementById("maçãS")
+            var maçãNão = document.getElementById("maçãN")
+            var kgMaçã = document.getElementById("kgMaçã")
+            maçãNão.addEventListener("change",habilitaKgMaçã) //A função "addEventListner()" serve para executar uma ação caso algo aconteça, é pareciso com a ideia do If. No caso, caso a opção maçãNão seja modificada ("change"), ela irá chamar a função "habilitaKgMaçã", e tudo dentro da função será executado
+            maçãSim.addEventListener("change",habilitaKgMaçã)
+            function habilitaKgMaçã() {
+                if (maçãNão.checked) {
+                    kgMaçã.setAttribute("disabled","disabled") // A função "setAttribute()" serve para adicioar atributos, neste caso são dois, pq o primeiro é o atriburo "disabled" em sí, e o outro é o valor
+                } else{
+                    kgMaçã.removeAttribute("disabled") //A função "removeAttribute()" é o inverso, serve para remover o atributo
+                }
+            }
+            var morangoSim = document.getElementById("morangoS")
+            var morangoNão = document.getElementById("morangoN")
+            var kgMorango = document.getElementById("kgMorango")
+            morangoNão.addEventListener("change",habilitaKgMorango)
+            morangoSim.addEventListener("change",habilitaKgMorango)
+            function habilitaKgMorango() {
+                if (morangoNão.checked) {
+                    kgMorango.setAttribute("disabled","disabled")
+                } else{
+                    kgMorango.removeAttribute("disabled")
+                }
+            }  
+        </script>
 </body>
 </html>
