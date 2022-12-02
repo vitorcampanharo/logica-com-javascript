@@ -29,23 +29,25 @@
         <input type="radio" name="morango" id="morangoN" checked> Não
         <br>
         <label for="kgMorango">Quantidade em kg:</label>
-        <input type="number" name="kg" id="kgMorango" disabled>
+        <input type="number" name="kg" id="kgMorango" disabled> <br>
+        <button onclick="verificar()">Verificar</button>
+        <div id="tela"></div>
         <script>
             var maçãSim = document.getElementById("maçãS")
             var maçãNão = document.getElementById("maçãN")
-            var kgMaçã = document.getElementById("kgMaçã")
-            maçãNão.addEventListener("change",habilitaKgMaçã) //A função "addEventListner()" serve para executar uma ação caso algo aconteça, é pareciso com a ideia do If. No caso, caso a opção maçãNão seja modificada ("change"), ela irá chamar a função "habilitaKgMaçã", e tudo dentro da função será executado
+            
+            maçãNão.addEventListener("change",habilitaKgMaçã)
             maçãSim.addEventListener("change",habilitaKgMaçã)
             function habilitaKgMaçã() {
                 if (maçãNão.checked) {
-                    kgMaçã.setAttribute("disabled","disabled") // A função "setAttribute()" serve para adicioar atributos, neste caso são dois, pq o primeiro é o atriburo "disabled" em sí, e o outro é o valor
+                    kgMaçã.setAttribute("disabled","disabled") 
                 } else{
-                    kgMaçã.removeAttribute("disabled") //A função "removeAttribute()" é o inverso, serve para remover o atributo
+                    kgMaçã.removeAttribute("disabled") 
                 }
             }
             var morangoSim = document.getElementById("morangoS")
             var morangoNão = document.getElementById("morangoN")
-            var kgMorango = document.getElementById("kgMorango")
+            
             morangoNão.addEventListener("change",habilitaKgMorango)
             morangoSim.addEventListener("change",habilitaKgMorango)
             function habilitaKgMorango() {
@@ -54,7 +56,45 @@
                 } else{
                     kgMorango.removeAttribute("disabled")
                 }
-            }  
+            }
+            function verificar() {
+                var kgMaçã = Number (document.getElementById("kgMaçã").value)
+                var kgMorango = Number (document.getElementById("kgMorango").value)
+                var tela = document.querySelector("#tela")
+                
+                var preçoTotal = preçoMaçã5kg+preçoMaçã5kgMais+preçoMorango5kg+preçoMorango5kgMais
+
+                var kgTotal = kgMaçã + kgMorango
+
+                if (kgTotal < 8 || preçoTotal < 25) {
+                    if (maçãSim.checked && kgMaçã <= 5) {
+                        var preçoMaçã5kgMais
+                        preçoMaçã5kg = kgMaçã*1.80
+                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando ${ preçoMaçã5kg}Reais`
+                    } else if(maçãSim.checked && kgMaçã > 5){
+                        var preçoMaçã5kg
+                        preçoMaçã5kg = kgMaçã*1.50
+                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando${preçoMaçã5kgMais} Reais`
+                    }
+                    if (morangoSim.checked && kgMorango <= 5) {
+                        var preçoMorango5kgMais
+                        preçoMorango5kgMais = kgMorango*2.50
+                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango5kg} Reais`
+                    } else if(morangoSim.checked && kgMorango > 5){
+                        var preçoMorango5kg
+                        preçoMorango5kg = kgMorango*2.20
+                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango5kgMais} Reais`
+                    }
+                } else{
+                    tela.innerHTML = `Voçe está comprando ${kgTotal}kg de frutas custando ${preçoTotal-(preçoTotal*0.1)}`
+                }
+               
+
+
+                console.log(preçoMaçã5kgMais)
+                console.log(preçoMaçã5kg) 
+            }
+                
         </script>
 </body>
 </html>
