@@ -32,6 +32,7 @@
         <input type="number" name="kg" id="kgMorango" disabled> <br>
         <button onclick="verificar()">Verificar</button>
         <div id="tela"></div>
+        <div id="tela2"></div>
         <script>
             var maçãSim = document.getElementById("maçãS")
             var maçãNão = document.getElementById("maçãN")
@@ -61,38 +62,35 @@
                 var kgMaçã = Number (document.getElementById("kgMaçã").value)
                 var kgMorango = Number (document.getElementById("kgMorango").value)
                 var tela = document.querySelector("#tela")
+                var tela2 = document.querySelector("#tela2")
                 
-                var preçoTotal = preçoMaçã5kg+preçoMaçã5kgMais+preçoMorango5kg+preçoMorango5kgMais
+                
 
                 var kgTotal = kgMaçã + kgMorango
-
-                if (kgTotal < 8 || preçoTotal < 25) {
+                
+                if (kgTotal > 8 || preçoTotal > 25) {
+                    tela.innerHTML = `Você está comprando ${kgTotal}kg no total, pagando ${preçoTotal-(preçoTotal*0.1)}`
+                } else{
                     if (maçãSim.checked && kgMaçã <= 5) {
-                        var preçoMaçã5kgMais
-                        preçoMaçã5kg = kgMaçã*1.80
-                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando ${ preçoMaçã5kg}Reais`
-                    } else if(maçãSim.checked && kgMaçã > 5){
-                        var preçoMaçã5kg
-                        preçoMaçã5kg = kgMaçã*1.50
-                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando${preçoMaçã5kgMais} Reais`
+                        var preçoMaçã = kgMaçã*1.80
+                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando ${ preçoMaçã}Reais`
+                    } else {
+                        var preçoMaçã = kgMaçã*1.50
+                        tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando${preçoMaçã} Reais`
                     }
                     if (morangoSim.checked && kgMorango <= 5) {
-                        var preçoMorango5kgMais
-                        preçoMorango5kgMais = kgMorango*2.50
-                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango5kg} Reais`
-                    } else if(morangoSim.checked && kgMorango > 5){
-                        var preçoMorango5kg
-                        preçoMorango5kg = kgMorango*2.20
-                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango5kgMais} Reais`
+                        var preçoMorango = kgMorango*2.50
+                        tela2.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
+                    } else{
+                        var preçoMorango = kgMorango*2.20
+                        tela2.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
                     }
-                } else{
-                    tela.innerHTML = `Voçe está comprando ${kgTotal}kg de frutas custando ${preçoTotal-(preçoTotal*0.1)}`
+                    var preçoTotal = preçoMaçã+preçoMorango
                 }
-               
-
-
-                console.log(preçoMaçã5kgMais)
-                console.log(preçoMaçã5kg) 
+                
+                
+                console.log("kg total ",kgTotal)
+                console.log("preço total ",preçoTotal)
             }
                 
         </script>
