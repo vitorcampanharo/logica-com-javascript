@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Faça um algoritmo para ler um número que é um código de usuário. Caso este código seja 
+        diferente de um código armazenado internamente no algoritmo (igual a 1234) deve ser apresentada a 
+        mensagem ,,Usuário inválido!,,. Caso o Código seja correto, deve ser lido outro valor que é a senha. Se 
+        esta senha estiver incorreta (a certa é 9999) deve ser mostrada a mensagem ,,senha incorreta,,. Caso a 
+        senha esteja correta, deve ser mostrada a mensagem ,,Acesso permitido,,.
+    </h1>
+    <pre>
+        <code>
+            &lt;label for="user">Usuário</label>
+            &lt;input type="text" name="user" id="user">
+            &lt;br>&lt;br>
+            &lt;label for="password">Senha</label>
+            &lt;input type="password" name="password" id="password">
+            &lt;br>&lt;br>
+            &lt;button onclick="verificar()">Verificar</button>
+            &lt;br>&lt;br>
+            &lt;script>      
+                function verificar() {
+                    let user = document.getElementById("user").value
+                    let password = document.getElementById("password").value
+                    if (user == "VitorCampanharo" && password == "10dejaneiro"){
+                        alert("Acesso liberado")
+                    } else{
+                        alert("Usuário inválido ou senha incorreta")
+                    }
+                    console.log(user)
+                    console.log(password)
+                }
+            &lt;/script>
+        </code>
+    </pre>
+    <label for="user">Usuário</label>
+    <input type="text" name="user" id="user">
+    <br><br>
+    <label for="password">Senha</label>
+    <input type="password" name="password" id="password">
+    <br><br>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="limpar()">Limpar</button>
+    <br><br>
+    <script>      
+        function verificar() {
+            let user = document.getElementById("user").value
+            let password = document.getElementById("password").value
+            if (user == "VitorCampanharo" && password == "10dejaneiro"){
+                alert("Acesso liberado")
+            } else{
+                alert("Usuário inválido ou senha incorreta")
+            }
+            console.log(user)
+            console.log(password)
+        }
+        function limpar() {
+            user.value = null
+            password.value = null
+        }
+    </script>
+</body>
+</html>

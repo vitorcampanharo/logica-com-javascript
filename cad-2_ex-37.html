@@ -68,31 +68,31 @@
 
                 var kgTotal = kgMaçã + kgMorango
                 
-                if (kgTotal > 8 || preçoTotal > 25) {
+                if (kgTotal > 8) {
                     tela.innerHTML = `Você está comprando ${kgTotal}kg no total, pagando ${preçoTotal-(preçoTotal*0.1)}`
                 } else{
-                    if (maçãSim.checked && kgMaçã <= 5) {
+                    if (maçãSim.checked && morangoSim.checked) {
+                        if (kgMaçã <=5 || kgMorango >=5) {
+                            tela.innerHTML = `Você está comprando ${kgMaçã}kg de maçã por ${kgMaçã*1.80} reais, e ${kgMorango}kg de morango por ${kgMaçã*2.50}`
+                        } else if (kgMaçã > 5 || kgMorango > 5) {
+                            tela.innerHTML = `Você está comprando ${kgMaçã}kg de maçã por ${kgMaçã*1.50} reais, e ${kgMorango}kg de morango por ${kgMaçã*2.20}`
+                        }
+                    } else if (maçãSim.checked && kgMaçã <= 5) {
                         var preçoMaçã = kgMaçã*1.80
                         tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando ${ preçoMaçã}Reais`
-                    } else {
+                    } else{
                         var preçoMaçã = kgMaçã*1.50
                         tela.innerHTML = `Você comprou ${kgMaçã}kg de maçã custando${preçoMaçã} Reais`
                     }
                     if (morangoSim.checked && kgMorango <= 5) {
                         var preçoMorango = kgMorango*2.50
-                        tela2.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
+                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
                     } else{
                         var preçoMorango = kgMorango*2.20
-                        tela2.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
+                        tela.innerHTML = `Você comprou ${kgMorango}kg de morango custando ${ preçoMorango} Reais`
                     }
-                    var preçoTotal = preçoMaçã+preçoMorango
                 }
-                
-                
-                console.log("kg total ",kgTotal)
-                console.log("preço total ",preçoTotal)
             }
-                
         </script>
 </body>
 </html>
