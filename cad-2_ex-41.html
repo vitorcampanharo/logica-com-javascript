@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 50vw;
+            height: 50vh;
+        }
+        input{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Faça um algoritmo para ler as 3 notas  obtidas por um aluno nas 3 verificações e a média dos 
+        exercícios que fazem parte da avaliação. Calcular a média de aproveitamento, usando a fórmula abaixo 
+        e escrever o conceito do aluno de acordo com a tabela de conceitos mais abaixo: </h1>
+        <img src="../41.png" alt="">
+        <pre>
+            <code>
+                &lt;section>
+                    &lt;label for="nota1">&lt;/label>
+                    &lt;input type="number" name="nota1" id="nota1" placeholder="Nota 1">
+                &lt;/section>
+                &lt;section>
+                    &lt;label for="nota2">&lt;/label>
+                    &lt;input type="number" name="nota2" id="nota2" placeholder="Nota 2">
+                &lt;/section>
+                &lt;section>
+                    &lt;label for="nota3">&lt;/label>
+                    &lt;input type="number" name="nota3" id="nota3" placeholder="Nota 3">
+                &lt;/section>
+                &lt;button onclick="calcular()">Calcular&lt;/button>
+                &lt;div id="tela">&lt;/div>
+                &lt;script>
+                    function calcular() {
+                        let nota1 = Number (document.getElementById("nota1").value)
+                        let nota2 = Number (document.getElementById("nota2").value)
+                        let nota3 = Number (document.getElementById("nota3").value)
+                        let mediaExercicio = (nota1 + nota2 + nota3) / 3
+                        let mediaAproveitamento = (nota1 + (nota2*2) + (nota3*3) + mediaExercicio) / 7
+                        let tela = document.getElementById("tela")
+                        if (mediaAproveitamento &lt; 6) {
+                            tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é D`
+                        } else if (mediaAproveitamento&lt;7.5) {
+                            tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é C`
+                        } else if (mediaAproveitamento&lt;9) {
+                            tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é B`
+                        } else{
+                            tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é A`
+                        }
+                        console.log(mediaExercicio)
+                        console.log(mediaAproveitamento.toFixed(2))
+                    }
+                </script>
+            </code>
+        </pre>
+        <section>
+            <label for="nota1"></label>
+            <input type="number" name="nota1" id="nota1" placeholder="Nota 1">
+        </section>
+        <section>
+            <label for="nota2"></label>
+            <input type="number" name="nota2" id="nota2" placeholder="Nota 2">
+        </section>
+        <section>
+            <label for="nota3"></label>
+            <input type="number" name="nota3" id="nota3" placeholder="Nota 3">
+        </section>
+        <button onclick="calcular()">Calcular</button>
+        <div id="tela"></div>
+        <script>
+            function calcular() {
+                let nota1 = Number (document.getElementById("nota1").value)
+                let nota2 = Number (document.getElementById("nota2").value)
+                let nota3 = Number (document.getElementById("nota3").value)
+                let mediaExercicio = (nota1 + nota2 + nota3) / 3
+                let mediaAproveitamento = (nota1 + (nota2*2) + (nota3*3) + mediaExercicio) / 7
+                let tela = document.getElementById("tela")
+                if (mediaAproveitamento < 6) {
+                    tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é D`
+                } else if (mediaAproveitamento<7.5) {
+                    tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é C`
+                } else if (mediaAproveitamento<9) {
+                    tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é B`
+                } else{
+                    tela.innerHTML = `Sua média é ${mediaAproveitamento.toFixed(2)}, logo seu conceito é A`
+                }
+                console.log(mediaExercicio)
+                console.log(mediaAproveitamento.toFixed(2))
+            }
+        </script>
+</body>
+</html>
