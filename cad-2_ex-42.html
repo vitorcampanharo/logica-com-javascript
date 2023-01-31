@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>42) Uma empresa quer verificar se um        empregado está qualificado para a aposentadoria ou não. Para 
+    estar em condições, um dos seguintes requisitos deve ser satisfeito:
+    <div><img src="../42.png" alt=""></div>
+    Com base nas informações acima, faça um algoritmo que leia: o número do empregado (código), o ano 
+    de seu nascimento e o ano de seu ingresso na empresa. O programa deverá escrever a idade e o tempo 
+    de trabalho do empregado e a mensagem 'Requerer aposentadoria' ou 'Não requerer'
+    </h1>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+    <section>
+        <label for="nasci"></label>
+        <input type="number" name="nasci" id="nasci" placeholder="Nascimento">
+    </section>
+    <section>
+        <label for="ingresso"></label>
+        <input type="number" name="ingresso" id="ingresso" placeholder="Admissão">
+    </section>
+    <section>
+        <button onclick="verificar()">Verificar</button>
+        <button onclick="limpar()">Limpar</button>
+    </section>
+    <section>
+        <div id="tela"></div>
+    </section>
+    <script>
+        function verificar() {
+            const codigo = Math.floor(Math.random() * (100 - 1 + 1)) + 1
+            const nasci = Number (document.getElementById("nasci").value)
+            const ingresso = Number (document.getElementById("ingresso").value)
+            const idade = 2023 - nasci
+            const tempoEmpresa = 2023 - ingresso
+            var tela = document.getElementById("tela")
+            if (idade >= 65 || tempoEmpresa >= 30) {
+                tela.innerHTML = `Empregado de código ${codigo}, com ${idade} anos de idade, trabalhando há ${tempoEmpresa} anos na empresa <br> Requer aposentadoria` 
+            } else if (idade >= 60 && tempoEmpresa >= 25) {
+                tela.innerHTML = `Empregado de código ${codigo}, com ${idade} anos de idade, trabalhando há ${tempoEmpresa} anos na empresa  <br> Requer aposentadoria` 
+            } else{
+                tela.innerHTML = `Empregado de código ${codigo}, com ${idade} anos de idade, trabalhando há ${tempoEmpresa} anos na empresa  <br> Não requer aposentadoria` 
+            }
+        }
+        function limpar() {
+            nasci.value = null
+            ingresso.value = null
+            tela.value = ""
+        }
+        
+
+    </script>
+</body>
+</html>
