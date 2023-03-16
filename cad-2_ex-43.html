@@ -7,29 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function fibonacci(num) {
-            var a = 0;
-            var b = 1;
-            var temp;
-
-            while (b <= num) {
-                if (b === num) {
-                    return `${num} pertence à sequência de Fibonacci.`;
-                }
-                temp = b;
-                b = a + b;
-                a = temp;
-            }
-
-            return `${num} não pertence à sequência de Fibonacci.`;
-            console.log(fibonacci(num))
-        }
-
-        ; // retorna "8 pertence à sequência de Fibonacci."
-        console.log(fibonacci(13)); // retorna "13 pertence à sequência de Fibonacci."
-        console.log(fibonacci(7)); // retorna "7 não pertence à sequência de Fibonacci."
-
-    </script>
+    <form action="">
+        <input type="text" list="fruta" placeholder="escolha um íten">
+        <datalist id="fruta">
+            <option>morango</option>
+            <option>abacaxi</option>
+            <option>uva</option>
+            <option>pera</option>
+            <option>maça</option>
+        </datalist>
+        <input type="reset" value="limpar">
+    </form>
+    <!-- A tag <datalist> serve para criar um caixa de diálogo (input) com opções já pré definidas para serem escolhidas, usando <option> -->
 </body>
 </html>
